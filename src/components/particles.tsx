@@ -12,7 +12,7 @@ interface ParticlesProps {
 }
 
 export default function Particles({
-	className = "",
+	className = "overflow-auto scrollbar-hide",
 	quantity = 30,
 	staticity = 50,
 	ease = 50,
