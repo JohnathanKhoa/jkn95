@@ -1,6 +1,4 @@
 import {
-  getUserLikedAlbums,
-  getUserLikedArtists,
   getUserLikedPlaylists,
   getUserLikedSongs,
 } from "@/lib/actions";
@@ -11,6 +9,8 @@ import UserLibrary from "./UserLibrary";
 import SpotifyImage from '@/public/images/spotify_logo.png'
 import YoutubeImage from '@/public/images/yt_logo_mono_dark.png'
 
+
+
 export default async function Sidebar() {
   const session = await getAuthSession();
 
@@ -18,10 +18,8 @@ export default async function Sidebar() {
     return null;
   }
 
-  const [playlists, albums, artists, likedSongsCount] = await Promise.all([
+  const [playlists, likedSongsCount] = await Promise.all([
     getUserLikedPlaylists(session),
-    getUserLikedAlbums(session),
-    getUserLikedArtists(session),
     getUserLikedSongs(session).then((data) => data.total),
   ]);
 
@@ -32,7 +30,7 @@ export default async function Sidebar() {
           src={YoutubeImage}
           width={125}
           height={50}
-          alt="Spotify logo"
+          alt="Youtube logo"
           priority
         />
         <div className="py-2"></div>
@@ -45,12 +43,10 @@ export default async function Sidebar() {
         />
         <SidebarLinksList />
       </div>
-
+      
       <UserLibrary
-        likedSongsCount={likedSongsCount}
         playlists={playlists}
-        artists={artists}
-        albums={albums}
+  
       />
     </aside>
   );

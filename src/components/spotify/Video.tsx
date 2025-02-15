@@ -1,8 +1,4 @@
 
-import { getYoutubeVideoDamon } from "@/lib/actions";
-import { Damon2Items, Track } from "@/types/types";
-import { getAuthSession } from "@/util/serverUtils";
-import { redirect } from "next/navigation";
 import { Dispatch, SetStateAction } from "react";
 import YouTube from 'react-youtube';
 

@@ -15,20 +15,13 @@ interface Props {
   showAlbum?: boolean;
   showSubtitle?: boolean;
   youtubeVideos: Damon2Items[];
-  track: Track;
   playlist: Playlist
 }
 
 export default function IndexContainer({
     playlist,
     tracks,
-    showSubtitle = false,
-    showCover = false,
-    showHeader = false,
-    showAlbum = false,
-    youtubeVideos,
-    track
-  }: Props) {
+    youtubeVideos  }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (

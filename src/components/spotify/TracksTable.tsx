@@ -1,17 +1,10 @@
 "use client"
 
-import { AuthSession, Damon2Items, Track } from "@/types/types";
+import { Damon2Items, Track } from "@/types/types";
 import { fmtMSS } from "@/util/clientUtils";
 import { Clock3, Music } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
-import PlayTrackButton from "./PlayTrackButton";
-import { getYoutubeVideo, getYoutubeVideoDamon, getYoutubeVideoDamon2 } from "@/lib/actions";
-import { getAuthSession } from "@/util/serverUtils";
-import { redirect } from "next/navigation";
-import Video from "./Video";
-import { getData } from "@/app/demos/(nurtree)/nurtree/(authenticated)/playlists/[...playlistId]/page";
 import { MdPlayArrow } from "react-icons/md";
 
 interface Props {
@@ -21,7 +14,6 @@ interface Props {
   showAlbum?: boolean;
   showSubtitle?: boolean;
   youtubeVideos: Damon2Items[];
-  track: Track;
   trackIndex: number;
   currentIndex: Dispatch<SetStateAction<number>>;
 }
@@ -32,26 +24,13 @@ export default function TracksTable({
   showCover = false,
   showHeader = false,
   showAlbum = false,
-  youtubeVideos,
   trackIndex,
   currentIndex
 }: Props) {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
-  //const [showComponent, setShowComponent] = useState(false);
-  //const [currentVideo, setCurrentVideo] = useState<string | ''>('');
-  //const handleClick = (track: Track, index: number) => {
-  //  console.log(index)
-  //      setCurrentVideo(youtubeVideos[index].id);
-  //      setShowComponent(true);
-  //};
-  //{showComponent && <div className="absolute -top-1/2 left-1/2"><Video track={track} id={currentVideo}/></div>}
 
   return (
     <div>
-      
-      
- 
-
       {showHeader && (
         <>
           <div className="md:contents hidden sticky w-full z-10">
@@ -59,7 +38,6 @@ export default function TracksTable({
             <div className="col-span-1 font-semibold tracking-wider text-left uppercase">
               #
             </div>
-
             <div
               className={`${
                 showAlbum ? "col-span-6" : "col-span-10"
@@ -67,33 +45,26 @@ export default function TracksTable({
             >
               Title
             </div>
-
             {showAlbum && (
               <div className="col-span-4 text-sm font-semibold text-left">
                 Album
               </div>
             )}
-
             <div className="col-span-1 font-semibold text-left">
               <Clock3 size={16} />
             </div>
-            
           </header>
-
-          
           <div className="col-span-12 border-b border-paper-600"></div>
           </div>
         </>
-      )} 
+      )}
 
       {/* Table Rows */}
-      
       <div className="w-full col-span-12 mt-2">
-      
         {tracks?.map((track, index) => (
           <>
           <div onClick={() => currentIndex(index)}
-            className={`grid py-2 px-4 rounded-lg grid-cols-12 ${
+            className={`grid py-2 px-4 grid-cols-12 ${
               trackIndex === index ? "bg-black" : "bg-transparent"
               
             }`}
@@ -135,11 +106,17 @@ export default function TracksTable({
                   ))}
 
                 <div className="w-full pr-3 truncate">
-                {track.name}
+                <a
+                   
+                    className="w-10/12 text-sm font-medium truncate"
+                  >
+                    {track.name}
+                  </a>
+                
                 
 
                   {showSubtitle && (
-                    <div className="flex flex-wrap items-center w-full gap-1 pr-3 text-sm text-gray">
+                    <div className="md:flex hidden items-center w-full gap-1 pr-3 text-sm text-gray">
                       <span className="truncate">
                         {track.artists.map((artist, index) => (
                           <a
@@ -157,13 +134,13 @@ export default function TracksTable({
             </div>
 
             {showAlbum && (
-              <div className="md:visible invisible flex items-center w-10/12 col-span-4 text-sm text-gray">
+              <div className="md:flex hidden items-center w-10/12 col-span-4 text-sm text-gray">
                 {track.album.name}
                 
               </div>
             )}
 
-            <small className="md:visible invisible flex items-center col-span-1 text-sm font-medium text-gray ">
+            <small className="md:flex hidden items-center col-span-1 text-sm font-medium text-gray ">
               {fmtMSS(track.duration_ms)}
             </small>
           </div>

@@ -1,27 +1,20 @@
 import AlbumCards from "@/components/spotify/AlbumCards";
 import ArtistCards from "@/components/spotify/ArtistCards";
-import PlayTrackButton from "@/components/spotify/PlayTrackButton";
 import TrackCards from "@/components/spotify/TrackCards";
 import {
   getNewReleases,
   getRecentlyPlayedTracks,
   getTopItems,
-  getYoutubeVideo,
-  getYoutubeVideoDamon,
 } from "@/lib/actions";
-import { Artist, Damon2Items, Track, YoutubeVideo } from "@/types/types";
+import { Artist, Track } from "@/types/types";
 import { getGreeting } from "@/util/clientUtils";
 import { getAuthSession } from "@/util/serverUtils";
-import { Album } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { Layers } from "lucide-react";
 import { redirect } from "next/navigation";
-import SpotifyImage from '@/public/images/spotify_logo.png'
-import PlayVideoButton from "@/components/spotify/PlayVideoButton";
 
 
 export const metadata = {
-  title: "Welcome to Spotify",
+  title: "Welcome to Nurtree",
 };
 
 export default async function Home() {
@@ -31,66 +24,52 @@ export default async function Home() {
     redirect("/login");
   }
 
+  const recentlyPlayed = (await getRecentlyPlayedTracks(session, 10).then(
+    (data) => data.items.map((item: any) => item.track)
+  )) as Track[];
+
   const topTracks = (await getTopItems({
     session,
     limit: 9,
     type: "tracks",
   }).then((data) => data.items)) as Track[];
 
+  const allTimeTopTracks = (await getTopItems({
+    session,
+    limit: 10,
+    timeRange: "long_term",
+    type: "tracks",
+  }).then((data) => data.items)) as Track[];
 
-{/*
-  const youtubeVideos: any[] = [];
+  const topArtists = (await getTopItems({
+    session,
+    limit: 12,
+    type: "artists",
+  }).then((data) => data.items)) as Artist[];
 
-  await Promise.all(
-    topTracks.map(async (track) => {
-      const result = await getYoutubeVideo(session, track);
-      youtubeVideos.push(result);
-    })
-  )
-*/}
+  const newReleases = await getNewReleases(session);
 
-
-
-  
 
   return (
 
     <section className="flex flex-col items-start">
-      <h1 className="mb-5 text-3xl font-bold">Good {getGreeting()}</h1>
+      <h1 className="mb-5 text-3xl font-bold">Good {getGreeting()}!</h1>
+      <h1 className="flex items-center gap-3 px-2 my-1 text-gray">
+      Choose a playlist from Your Library to get the top music video for each track
+      </h1> 
 
-      <h1 className="mt-8">Top Tracks</h1>
-      <div className="grid w-full grid-cols-12 gap-4">
-        {topTracks.map((track) => (
-          <Link
-            href={`nurtree/tracks/${track.id}`}
-            key={track.id}
-            className="flex items-center justify-between col-span-4 pr-4 truncate rounded-md group/item bg-paper-600 hover:bg-paper-400"
-          >
-            <div className="flex items-center gap-4">
-              {track.album.images.length > 0 ? (
-                <Image
-                  src={track.album.images[0].url}
-                  alt={track.name}
-                  width={96}
-                  height={96}
-                  className="object-cover h-full rounded-tl-md rounded"
-                />
-              ) : (
-                <Album size={20} />
-              )}
-              <h3 className="font-semibold truncate">{track.name}</h3>
-            </div>
+      <h1 className="my-5 mt-16 text-3xl font-bold">Your Spotify Statistics</h1>
+      <h1 className="">Your Top Tracks</h1>
+      <TrackCards tracks={topTracks} />
 
-            <PlayTrackButton
-              track={track}
-              variant="filled"
-              className="invisible w-12 h-12 text-3xl group/btn group-hover/item:visible"
-            />
-          </Link>
-        ))}
-      </div>
+      <h1 className="mt-16">Recently Played</h1>
+      <TrackCards tracks={recentlyPlayed} />
 
-      
+      <h1 className="mt-16">Top Artists</h1>
+      <ArtistCards artists={topArtists} />
+
+      <h1 className="mt-16">New releases</h1>
+      <AlbumCards albums={newReleases} />
       
     </section>
   );

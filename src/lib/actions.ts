@@ -107,7 +107,7 @@ export const getPlaylistsByCategory = async (
     `https://api.spotify.com/v1/browse/categories/${categoryId}/playlists`,
     session
   );
-  console.log(data)
+  
   return data.playlists.items;
 };
 
@@ -175,7 +175,6 @@ export const getUserLikedPlaylists = async (
       currUrl + offset,
       session
     )
-    console.log(userData.items)
     userData.items.push(...nextdata.items);
   
   return userData.items;
@@ -312,7 +311,7 @@ export const getYoutubeVideoDamon = async (
 
   const res =  await youtubesearchapi.GetListByKeyword(name + artist, [false], [1], [{type:"video"}]);
   const items = await res.items[0];
-  console.log(await items[0])
+  
   return await items;
 };
 
@@ -325,7 +324,7 @@ export const getYoutubeVideoDamon2 = async (
 
   const res =  await youtubesearchapi.GetListByKeyword(name + artist, [false], [1], [{type:"video"}]);
   const items = await res.items[0];
-  console.log(await items[0])
+  
   return await items;
 };
 

@@ -17,7 +17,6 @@ export default function ArtistCards({ artists }: Props) {
           images={artist.images}
           altTitle={artist.name}
           subheading="Artist"
-          imageRounded
           type="artists"
         />
       ))}

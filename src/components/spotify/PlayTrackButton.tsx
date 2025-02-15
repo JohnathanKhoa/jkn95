@@ -1,7 +1,5 @@
 "use client";
 
-import { setCurrentVideo } from "@/components/spotify/Video"
-import { useStore } from "@/providers/zustand";
 import { Track } from "@/types/types";
 import { MdPlayArrow } from "react-icons/md";
 

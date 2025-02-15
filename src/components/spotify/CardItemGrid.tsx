@@ -3,5 +3,5 @@ interface Props {
 }
 
 export default function CardItemGrid({ children }: Props) {
-  return <div className="grid items-stretch grid-cols-5 gap-6">{children}</div>;
+  return <div className="grid items-stretch md:grid-cols-5 grid-cols-2 gap-6">{children}</div>;
 }

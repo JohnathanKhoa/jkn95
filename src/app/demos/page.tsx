@@ -23,10 +23,10 @@ export default function Page() {
               <br></br>
             </p>
             <p className="justify-self-center">
-              Get a playlist of top music videos based on your top tracks
+              Get a playlist of top music videos based on your personal Spotify playlists
             </p>
             <p>
-              Vercel, NextJS, TypeScript, JavaScript, HTML, Markdown, CSS, App Router
+              Vercel, NextJS, TypeScript, JavaScript, HTML, Markdown, Tailwind/CSS
             </p>
         </div>
         

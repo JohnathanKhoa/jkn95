@@ -4,6 +4,8 @@ import { Album, Artist, Playlist } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import LoadingDots from "./LoadingDots";
 
 interface Props {
   type: "artists" | "playlists" | "albums";
@@ -11,18 +13,30 @@ interface Props {
   subtitle?: string;
 }
 
+
+
+
+
 export default function LibraryItemCard({ type, entity, subtitle }: Props) {
+  
   const pathname = usePathname();
 
   const href = `${type}/${entity.id}`;
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+  
 
   return (
-    <Link
+    
+    <Link onClick={() => setIsOpen(true)}
       href={`/demos/nurtree/${href}`}
       className={`${
         pathname === href ? "bg-paper-400" : ""
       } flex items-center p-2 gap-3 rounded-md text-white cursor-pointer  hover:bg-paper-600`}
     >
+      {isOpen && <LoadingDots/>}
       <Image
         src={entity.images[0].url}
         alt={entity.name}
@@ -41,6 +55,8 @@ export default function LibraryItemCard({ type, entity, subtitle }: Props) {
           <span className="mt-1 text-xs font-medium text-gray">{subtitle}</span>
         )}
       </div>
+      
     </Link>
+    
   );
 }

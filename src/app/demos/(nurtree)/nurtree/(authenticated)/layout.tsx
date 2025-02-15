@@ -1,7 +1,6 @@
 import "@/app/globals.css";
 import Header from "@/components/spotify/Header";
 import { NextAuthProvider } from "@/providers/NextAuthProvider";
-import PreviewPlayer from "@/components/spotify/PreviewPlayer";
 import Sidebar from "@/components/spotify/Sidebar";
 import TrackPlayerProvider from "@/providers/TrackPlayerProvider";
 import { Montserrat } from "next/font/google";
@@ -30,7 +29,7 @@ export default function RootLayout({
                 <main className="mx-8 my-4">{children}</main>
               </div>
             </div>
-            <PreviewPlayer />
+            
           
         </TrackPlayerProvider>
       </NextAuthProvider>
