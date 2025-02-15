@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Error in loading playlist data",
     };
   }
-  const playlistId = params.playlistId;
+  const playlistId = await params.playlistId;
   const playlist = await getPlaylistById(session, playlistId);
   return {
     title: `Spotify - ${playlist.name}`,
