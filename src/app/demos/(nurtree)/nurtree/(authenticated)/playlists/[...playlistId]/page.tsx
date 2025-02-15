@@ -35,7 +35,7 @@ export default async function PlaylistPage({ params }: Props) {
     redirect("/login");
   }
  
-  const playlistId = await params.playlistId;
+  const playlistId = (await params).playlistId;
   const playlist = await getPlaylistById(session, playlistId);
   const playlistTracks:Track[] = playlist?.tracks.items
   .filter((item: any) => item.track !== null)
