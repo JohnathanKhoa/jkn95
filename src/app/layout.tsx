@@ -37,7 +37,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
     
-      <body
+      <body className="bg-zinc-800"
       >
         <Particles
         className="absolute inset-0 -z-10 animate-fade-in overflow-auto scrollbar-hide"
