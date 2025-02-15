@@ -31,7 +31,7 @@ const authOptions: NextAuthOptions = {
     },
   },
   pages: {
-    signIn: "/demos/nurtree/login",
+    signIn: "/api/auth/login",
   },
 };
 
