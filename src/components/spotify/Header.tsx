@@ -13,7 +13,7 @@ export default function Header() {
   const router = useRouter();
 
   const logout = () => {
-    signOut({ callbackUrl: "https://jkn95-blond.vercel.app/demos/nurtree/login" });
+    signOut({ callbackUrl: "https://jkn95-git-master-johnathankhoas-projects.vercel.app/demos/nurtree/login" });
   };
 
   return (
