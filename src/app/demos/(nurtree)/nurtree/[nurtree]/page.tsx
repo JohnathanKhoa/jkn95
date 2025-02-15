@@ -15,11 +15,11 @@ export default function Page() {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center w-screen h-screen gap-20">
+    <div className="flex flex-col py-10 items-center content-center  h-screen gap-10">
       <div className="text-center text-balance flex flex-col items-center justify-center">
       Play all the top music videos using your own curated Spotify playlists
       </div>
-      <div className="flex md:flex-row flex-col w-screen items-center justify-center gap-x-6">
+      <div className="flex  flex-col w-screen items-center justify-center gap-x-6">
         Nurtree, a blend of
         <Image
           src={SpotifyImage}

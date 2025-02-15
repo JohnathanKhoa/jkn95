@@ -17,7 +17,8 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between w-full p-4 pl-10 rounded-lg bg-paper-700">
+    <div>
+    <header className="sticky top-0 z-50 flex items-center justify-between w-full">
       <div className="flex items-center gap-10 w-[32rem]">
         <div className="flex items-center gap-3">
           <button
@@ -55,7 +56,7 @@ export default function Header() {
             {session?.user.name}
           </span>
         </div>
-
+          
         <button
           className="flex items-center justify-center bg-background-secondary bg-opacity-70 rounded-full h-10 w-10 hover:bg-[#181818] focus:outline-none cursor-pointer"
           onClick={logout}
@@ -64,5 +65,6 @@ export default function Header() {
         </button>
       </div>
     </header>
+    </div>
   );
 }

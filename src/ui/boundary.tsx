@@ -36,7 +36,7 @@ export const Boundary = ({
 }) => {
   return (
     <div
-      className={clsx('relative rounded-lg ', {
+      className={clsx('content-center ', {
         'p-3 lg:p-5': size === 'small',
         'p-4 lg:p-9': size === 'default',
         'border-gray-700': color === 'default',

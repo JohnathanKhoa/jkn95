@@ -21,11 +21,11 @@ export default function SidebarLinksList() {
           }`}
         >
           <Home size={20} />
-          <span className="md:flex hidden font-semibold">Home</span>
         </li>
         
       </Link>
 
     </ul>
+    
   );
 }

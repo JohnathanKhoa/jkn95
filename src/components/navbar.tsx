@@ -10,7 +10,7 @@ const navigation = [
 
 export default function Navbar() {
     return (
-        <nav className="py-16 animate-fade-in">
+        <nav className="pt-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
             <Link

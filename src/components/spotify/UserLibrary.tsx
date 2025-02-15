@@ -1,9 +1,10 @@
 "use client";
-
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Playlist } from "@/types/types";
-import { EllipsisVerticalIcon, Layers, Menu } from "lucide-react";
-import { useState } from "react";
+import { EllipsisVerticalIcon, Layers, Menu as MenuIcon } from "lucide-react";
+import { Fragment, useState } from "react";
 import LibraryItemCard from "./LibraryItemCard";
+import clsx from 'clsx';
 
 
 interface Props {
@@ -23,14 +24,17 @@ export default function UserLibrary({
 
   return (
     
-    <div className="flex flex-col items-stretch flex-1 max-h-full px-2 py-4 mt-2 overflow-y-hidden rounded-lg bg-paper-700 ">
-      <div className="md:flex hidden justify-center gap-3 my-1 text-gray">
-        <Layers size={25} />
-        <span className="md:flex hidden font-semibold justify-center">Your Library</span>
-      </div>
-      <div className="flex justify-center">---</div>
-      <ul className="flex flex-col w-full overflow-y-auto text-sm scrollbar-hide">
-            {playlists.map((playlist) => (
+    <div className="flex items-start w-full overflow-y-hidden rounded-lg bg-paper-700 ">
+      <div className="flex flex-col items-center w-full">
+        ---
+      <Menu>
+      <MenuButton as={Fragment}>
+        {({ active }) => <button className={clsx(active)}>{active === true ? <MenuIcon size={25} /> : <MenuIcon size={25} className="animate-bounce"/>}</button>}
+        
+      </MenuButton>
+      
+      <MenuItems anchor="bottom" className="overflow-auto scrollbar-hide bg-zinc-700 rounded-xl opacity-80">
+      {playlists.map((playlist) => (
               <LibraryItemCard
                 key={playlist.id}
                 entity={playlist}
@@ -38,7 +42,9 @@ export default function UserLibrary({
                 subtitle={playlist.owner.display_name}
               />
             ))}
-      </ul>
+      </MenuItems>
+    </Menu>
+    </div>
     </div>
   );
 }

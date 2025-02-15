@@ -5,6 +5,7 @@ import Sidebar from "@/components/spotify/Sidebar";
 import TrackPlayerProvider from "@/providers/TrackPlayerProvider";
 import { Montserrat } from "next/font/google";
 
+
 const fontFamily = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
@@ -23,10 +24,10 @@ export default function RootLayout({
         <TrackPlayerProvider>
           
             <div className="grid grid-cols-10 gap-2 scrollbar-hide">
-              <Sidebar />
+              <Sidebar/>
               <div className="flex flex-col h-[87vh] col-span-8 overflow-auto rounded-lg bg-paper-700 scrollbar-hide">
                 <Header />
-                <main className="mx-8 my-4">{children}</main>
+                <main className="">{children}</main>
               </div>
             </div>
             

@@ -24,8 +24,8 @@ export default async function Sidebar() {
   ]);
 
   return (
-    <aside className="flex flex-col h-[87vh] col-span-2 text-sm rounded-lg">
-      <div className="flex flex-col items-center p-4 rounded-lg bg-paper-700">
+    <aside className="sticky top-0 text-sm rounded-lg">
+      <div className="md:flex hidden flex-col items-center p-4 rounded-lg bg-paper-700">
       <Image
           src={YoutubeImage}
           width={125}
@@ -41,13 +41,14 @@ export default async function Sidebar() {
           alt="Spotify logo"
           priority
         />
-        <SidebarLinksList />
-      </div>
-      
-      <UserLibrary
-        playlists={playlists}
+        
   
-      />
+      
+      </div>
+      <SidebarLinksList />
+        <UserLibrary
+        playlists={playlists}
+        />
     </aside>
   );
 }
