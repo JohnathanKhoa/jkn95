@@ -28,7 +28,7 @@ export default function TracksTable({
   currentIndex
 }: Props) {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
-
+  let keyCount = 0;
   return (
     <div>
       {showHeader && (
@@ -68,7 +68,7 @@ export default function TracksTable({
               trackIndex === index ? "bg-black" : "bg-transparent"
               
             }`}
-            key={track.id + index + 1}
+            key={track.id + index + keyCount++}
             onMouseEnter={() => setHoveredRow(index)}
             onMouseLeave={() => setHoveredRow(null)}
           >
