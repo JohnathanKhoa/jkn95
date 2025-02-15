@@ -8,9 +8,9 @@ import { Suspense } from "react";
 
 
 interface Props {
-  params: {
+  params: Promise<{
     playlistId: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Error in loading playlist data",
     };
   }
-  const playlistId = await params.playlistId;
+  const playlistId = (await params).playlistId;
   const playlist = await getPlaylistById(session, playlistId);
   return {
     title: `Spotify - ${playlist.name}`,
