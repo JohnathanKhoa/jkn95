@@ -30,11 +30,11 @@ export default function LibraryItemCard({ type, entity, subtitle }: Props) {
 
   return (
     
-    <Link onClick={() => setIsOpen(true)}
-      href={`/demos/nurtree/${href}`}
+    <Link prefetch={false} onClick={() => setIsOpen(true)}
+      href={`/demos/nurtree/${href}/0`}
       className={`${
         pathname === href ? "bg-paper-400" : ""
-      } flex items-center p-2 gap-3 rounded-md text-white cursor-pointer  hover:bg-paper-600`}
+      } flex items-center p-2 gap-3 rounded-md text-white cursor-pointer  hover:bg-zinc-500`}
     >
       {isOpen && <LoadingDots/>}
       <Image

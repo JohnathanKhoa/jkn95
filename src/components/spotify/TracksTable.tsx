@@ -4,8 +4,10 @@ import { Damon2Items, Track } from "@/types/types";
 import { fmtMSS } from "@/util/clientUtils";
 import { Clock3, Music } from "lucide-react";
 import Image from "next/image";
+import { redirect, usePathname, useRouter } from "next/navigation";
 import { Dispatch, SetStateAction, useState } from "react";
 import { MdPlayArrow } from "react-icons/md";
+import { Vibrant } from "node-vibrant/browser";
 
 interface Props {
   tracks: Track[];
@@ -13,7 +15,8 @@ interface Props {
   showCover?: boolean;
   showAlbum?: boolean;
   showSubtitle?: boolean;
-  youtubeVideos: Damon2Items[];
+  i: number;
+  color: Promise<string>;
   trackIndex: number;
   currentIndex: Dispatch<SetStateAction<number>>;
 }
@@ -24,11 +27,14 @@ export default function TracksTable({
   showCover = false,
   showHeader = false,
   showAlbum = false,
-  trackIndex,
-  currentIndex
+  i,
+  color
 }: Props) {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
   let keyCount = 0;
+  
+  //const res = Promise.resolve(color).then(result => {return result})
+  //console.log(res)
   return (
     <div>
       {showHeader && (
@@ -63,12 +69,13 @@ export default function TracksTable({
       <div className="w-full col-span-12 mt-2">
         {tracks?.map((track, index) => (
           <>
-          <div onClick={() => currentIndex(index)}
-            className={`grid py-2 px-4 grid-cols-12 ${
-              trackIndex === index ? "bg-black" : "bg-transparent"
+          <div onClick={() => (redirect(`${index}`))}
+            className={`grid py-2 px-4 grid-cols-12 hover:bg-zinc-500 ${
+              index === i ? "bg-black" : "bg-transparent"
               
             }`}
             key={track.id + index + keyCount++}
+            
             onMouseEnter={() => setHoveredRow(index)}
             onMouseLeave={() => setHoveredRow(null)}
           >
@@ -87,8 +94,9 @@ export default function TracksTable({
               } flex items-center w-full`}
             >
               <div className="flex items-center w-screen gap-4">
-                {showCover &&
+                {showCover && 
                   (track.album.images && track.album.images.length > 0 ? (
+                    
                     <div className="flex-shrink-0 w-10 h-10">
                       <Image
                         src={track.album.images?.[0].url as string}

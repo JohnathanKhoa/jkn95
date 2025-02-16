@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Page() {
   const handleLogin = () => {
-    signIn("spotify", { callbackUrl: "https://jkn95-blond.vercel.app/demos/nurtree" });
+    signIn("spotify", { callbackUrl: "http://localhost:3000/demos/nurtree" });
   };
 
   return (

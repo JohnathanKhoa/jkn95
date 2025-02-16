@@ -1,27 +1,31 @@
-
-import { Dispatch, SetStateAction } from "react";
+'use client'
+import { getYoutubeVideoDamon } from "@/lib/actions";
+import { AuthSession, Damon2Items, Track } from "@/types/types";
+import { redirect } from "next/navigation";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import YouTube from 'react-youtube';
+import  useSWR  from 'swr'
 
 interface Props {
     tracksLength: number;
-    id: string;
     index: number;
+    id: string;
     currentIndex: Dispatch<SetStateAction<number>>;
+    
 }
 
 
 
-export default function Video({tracksLength, id, index, currentIndex}: Props) {
+
+export default function Video({tracksLength, index, id, currentIndex}: Props) {
   
-   
-
-    return ( 
-
-        <div className="flex justify-center">
+  return ( 
+    
+    <div className="flex justify-center">
       <YouTube
         videoId={id}
         className="absolute size-full content-center"
-        onEnd={() => index + 1 >= tracksLength ? currentIndex(0) : currentIndex(index + 1)}
+        onEnd={() => index + 1 >= tracksLength ? redirect(`${0}`) : redirect(`${index+1}`)}
         opts={{
           width: '100%',
           height: '100%',
@@ -38,9 +42,6 @@ export default function Video({tracksLength, id, index, currentIndex}: Props) {
           }
         }}
       />
-      </div>
-        
-                
-
-    )
+    </div>
+  )
 }

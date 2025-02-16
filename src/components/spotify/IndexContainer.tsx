@@ -1,34 +1,47 @@
 'use client'
-import { Track, Damon2Items, Playlist } from "@/types/types";
-import { useState } from "react";
+import { Track, Damon2Items, Playlist, AuthSession } from "@/types/types";
+import { useEffect, useState } from "react";
 import TracksTable from "./TracksTable";
 import Video from "./Video";
 import Image from "next/image";
 import { Music, Dot } from "lucide-react";
 import parse from "html-react-parser";
 import styles from "@/styles/Description.module.css";
+import { getYoutubeVideoDamon } from "@/lib/actions";
+import useSWR from "swr";
+import { Vibrant } from "node-vibrant/browser";
 
 interface Props {
   tracks: Track[];
-  showHeader?: boolean;
-  showCover?: boolean;
-  showAlbum?: boolean;
-  showSubtitle?: boolean;
-  youtubeVideos: Damon2Items[];
+  track: string;
   playlist: Playlist
+  index: number;
 }
+
 
 export default function IndexContainer({
     playlist,
     tracks,
-    youtubeVideos  }: Props) {
+    track,
+    index,
+      }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    let v = new Vibrant(playlist.images[0].url);
+    async function color(image) {
+        let v = new Vibrant(image);
+        
+        v.getPalette().then((palette) => {return palette.Vibrant?.hex});
+        
+      }
+    
+    color(playlist.images[0].url);
+    
+    
     return (
         <>
         <div className="flex flex-col">
             <div className="relative h-1/3 aspect-video top-1/5">
-                {<Video tracksLength={tracks.length} id={youtubeVideos[currentIndex].id} index={currentIndex} currentIndex={setCurrentIndex}/>}
+                {<Video tracksLength={tracks.length} id={track} index={index} currentIndex={setCurrentIndex}/>}
             
             </div>
             <div className="md:flex hidden items-end gap-6 my-4">
@@ -88,7 +101,8 @@ export default function IndexContainer({
                 showCover
                 showHeader
                 showSubtitle
-                youtubeVideos={youtubeVideos}
+                i={index}
+                color={v.getPalette().then((palette) => {return palette.Vibrant?.hex})}
                 currentIndex={setCurrentIndex}
                 trackIndex={currentIndex}
             />
