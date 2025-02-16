@@ -27,14 +27,14 @@ export default function IndexContainer({
       }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
     let v = new Vibrant(playlist.images[0].url);
-    async function color(image) {
-        let v = new Vibrant(image);
+    // async function color(image) {
+    //     let v = new Vibrant(image);
         
-        v.getPalette().then((palette) => {return palette.Vibrant?.hex});
+    //     v.getPalette().then((palette) => {return palette.Vibrant?.hex});
         
-      }
+    //   }
     
-    color(playlist.images[0].url);
+    // color(playlist.images[0].url);
     
     
     return (
@@ -102,7 +102,7 @@ export default function IndexContainer({
                 showHeader
                 showSubtitle
                 i={index}
-                color={v.getPalette().then((palette) => {return palette.Vibrant?.hex})}
+                
                 currentIndex={setCurrentIndex}
                 trackIndex={currentIndex}
             />

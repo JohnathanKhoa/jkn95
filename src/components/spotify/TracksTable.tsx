@@ -16,7 +16,7 @@ interface Props {
   showAlbum?: boolean;
   showSubtitle?: boolean;
   i: number;
-  color: Promise<string>;
+  //color: Promise<string>;
   trackIndex: number;
   currentIndex: Dispatch<SetStateAction<number>>;
 }
@@ -28,7 +28,7 @@ export default function TracksTable({
   showHeader = false,
   showAlbum = false,
   i,
-  color
+  
 }: Props) {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
   let keyCount = 0;
