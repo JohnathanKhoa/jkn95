@@ -1,0 +1,9 @@
+Languages,Frontend,Backend,AWS,Containerization,Automation,Version Control,Testing,OS,IDE
+Java,Angular,Spring Framework,Elastic Beanstalk,Docker,Jenkins,Github,Cypress,Linux,IntelliJ
+JavaScript,React,MySQL,EC2,Kubernetes,,Teamforge,JUnit,Windows,VSCode
+TypeScript,NextJS,Oracle,RDS,,,,Postman,,
+HTML/Markdown,Vercel,MongoDB,S3,,,,,,
+Tailwind/CSS,Retool,JDBC,,,,,,,
+Python,,Hibernate,,,,,,,
+SQL,,Microservices,,,,,,,
+Linux,,,,,,,,,

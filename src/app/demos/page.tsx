@@ -5,7 +5,7 @@ import NurtreeImage from '@/public/images/nurtree.png'
 
 export default function Page() {
     return (
-        <div className="justify-self-center pt-10">
+        <div className="content-center justify-self-center pt-10">
           
             <Link
               key={1}

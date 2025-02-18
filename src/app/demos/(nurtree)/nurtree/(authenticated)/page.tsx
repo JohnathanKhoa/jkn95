@@ -30,7 +30,7 @@ export default async function Home() {
 
   const topTracks = (await getTopItems({
     session,
-    limit: 9,
+    limit: 10,
     type: "tracks",
   }).then((data) => data.items)) as Track[];
 
@@ -43,7 +43,7 @@ export default async function Home() {
 
   const topArtists = (await getTopItems({
     session,
-    limit: 12,
+    limit: 10,
     type: "artists",
   }).then((data) => data.items)) as Artist[];
 
@@ -53,9 +53,9 @@ export default async function Home() {
   return (
 
     <section className="flex flex-col items-start">
-      <h1 className="mb-5 text-3xl font-bold">Good {getGreeting()}!</h1>
+      <h1 className="mb-5 text-3xl font-bold">Hello, {session?.user.name}!</h1>
       <h1 className="flex items-center gap-3 px-2 my-1 text-gray">
-      Choose a playlist from Your Library to get the top music video for each track
+      Choose a playlist from your library to get the top music video for each track
       </h1> 
 
       <h1 className="my-5 mt-16 text-3xl font-bold">Your Spotify Statistics</h1>
