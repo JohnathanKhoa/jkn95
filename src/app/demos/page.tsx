@@ -5,12 +5,12 @@ import NurtreeImage from '@/public/images/nurtree.png'
 
 export default function Page() {
     return (
-        <div className="content-center justify-self-center pt-10">
+        <div className="content-center justify-self-center pt-10 px-8">
           
             <Link
               key={1}
               href="/demos/nurtree/login"
-              className="justify-self-center text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              className="flex flex-col items-center justify-center text-sm duration-500 text-zinc-500 hover:text-zinc-300"
             >
               <Image className="rounded-xl pyobject-scale-down w-48 justify-self-center" src={NurtreeImage} alt="NurtreeImage"/>
               <div className="justify-self-center">
@@ -26,7 +26,7 @@ export default function Page() {
               Get a playlist of top music videos based on your personal Spotify playlists
             </p>
             <p className="text-center text-balance">
-              Vercel, NextJS, TypeScript, JavaScript, HTML, Markdown, Tailwind/CSS
+              Vercel, NextJS, TypeScript, JavaScript, HTML, Tailwind/CSS
             </p>
         </div>
         
