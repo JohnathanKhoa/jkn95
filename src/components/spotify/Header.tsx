@@ -4,12 +4,11 @@ import { AuthSession } from "@/types/types";
 import { ChevronLeft, ChevronRight, LogOut, User2 } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const { data } = useSession();
   const session = data as AuthSession;
-  const pathname = usePathname();
   const router = useRouter();
 
   const logout = () => {

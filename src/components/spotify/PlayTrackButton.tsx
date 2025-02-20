@@ -11,13 +11,8 @@ interface Props {
 
 export default function PlayTrackButton({
   variant = "simple",
-  track,
-  className,
-}: Props) {
 
-  const simpleButtonStyle = "flex items-center col-span-1 text-white";
-  const filledButtonStyle =
-    "flex items-center justify-center rounded-full bg-primary";
+}: Props) {
 
   return (
     

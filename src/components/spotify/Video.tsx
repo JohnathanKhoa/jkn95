@@ -1,10 +1,7 @@
 'use client'
-import { getYoutubeVideoDamon } from "@/lib/actions";
-import { AuthSession, Damon2Items, Track } from "@/types/types";
 import { redirect } from "next/navigation";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import YouTube from 'react-youtube';
-import  useSWR  from 'swr'
 
 interface Props {
     tracksLength: number;

@@ -5,7 +5,6 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 import SpotifyImage from '@/public/images/spotify_logo.png'
 import YoutubeImage from '@/public/images/yt_logo_mono_dark.png'
-import NurtreeImage from '@/public/images/nurtree.png'
 import Link from "next/link";
 
 export default function Page() {

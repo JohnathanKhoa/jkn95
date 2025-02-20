@@ -1,8 +1,8 @@
 "use client";
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Menu, MenuButton, MenuItems } from '@headlessui/react'
 import { Playlist } from "@/types/types";
-import { EllipsisVerticalIcon, Layers, Menu as MenuIcon } from "lucide-react";
-import { Fragment, useState } from "react";
+import { Menu as MenuIcon } from "lucide-react";
+import { Fragment } from "react";
 import LibraryItemCard from "./LibraryItemCard";
 import clsx from 'clsx';
 

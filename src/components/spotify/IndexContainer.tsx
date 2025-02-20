@@ -1,14 +1,12 @@
 'use client'
-import { Track, Damon2Items, Playlist, AuthSession } from "@/types/types";
-import { useEffect, useState } from "react";
+import { Track, Playlist } from "@/types/types";
+import { useState } from "react";
 import TracksTable from "./TracksTable";
 import Video from "./Video";
 import Image from "next/image";
 import { Music, Dot } from "lucide-react";
 import parse from "html-react-parser";
 import styles from "@/styles/Description.module.css";
-import { getYoutubeVideoDamon } from "@/lib/actions";
-import useSWR from "swr";
 import { Vibrant } from "node-vibrant/browser";
 
 interface Props {

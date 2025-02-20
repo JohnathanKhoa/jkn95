@@ -1,6 +1,5 @@
 import { Music } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Props {
   images: any;
@@ -13,14 +12,11 @@ interface Props {
 }
 
 export default function CardItem({
-  
   images,
-  id,
   altTitle,
   heading,
   subheading,
   imageRounded = false,
-  type,
 }: Props) {
   return (
     <div>

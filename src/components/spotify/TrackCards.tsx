@@ -1,9 +1,8 @@
-import { Damon2Items, Track, YoutubeVideo } from "@/types/types";
+import { Track } from "@/types/types";
 import { Music } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import CardItemGrid from "./CardItemGrid";
-import PlayTrackButton from "./PlayTrackButton";
+
 
 interface Props {
   tracks: Track[];

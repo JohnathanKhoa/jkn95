@@ -7,9 +7,7 @@ import {
   getTopItems,
 } from "@/lib/actions";
 import { Artist, Track } from "@/types/types";
-import { getGreeting } from "@/util/clientUtils";
 import { getAuthSession } from "@/util/serverUtils";
-import { Layers } from "lucide-react";
 import { redirect } from "next/navigation";
 
 

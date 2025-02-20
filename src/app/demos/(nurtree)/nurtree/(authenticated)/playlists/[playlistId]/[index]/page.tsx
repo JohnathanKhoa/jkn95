@@ -1,11 +1,9 @@
-import { getPlaylistById, getTrackById, getYoutubeVideoDamon } from "@/lib/actions";
+import { getPlaylistById, getYoutubeVideoDamon } from "@/lib/actions";
 import { getAuthSession } from "@/util/serverUtils";
 import { Metadata } from "next";
-import { Damon2Items, Track, YoutubeVideo } from "@/types/types";
+import { Track } from "@/types/types";
 import IndexContainer from "@/components/spotify/IndexContainer";
-import { Suspense } from "react";
 import { redirect } from "next/navigation";
-import { Vibrant } from "node-vibrant/browser";
 
 
 interface Props {
@@ -39,15 +37,6 @@ export default async function PlaylistPage({ params }: Props) {
   }
  
   const param = (await params);
-  
-  //  const youtubeVideo: Damon2Items[] = [];
-
-  
-  //  for (let i = 0; i < playlistTracks.length; i++){
-  //    const result = await getYoutubeVideoDamon(session, playlistTracks[0]);
-  //    youtubeVideo.push(result);
-  //  }
-  //redirect(pathname +`/tracks/${playlistTracks[0]}`);
   
   const playlistId = param.playlistId;
   const index = Number(param.index);

@@ -1,7 +1,4 @@
 import React from "react";
-import TechStack from '../markdown/techstack.mdx'
-import Papa from 'papaparse';
-
 
 export default function Page() {
   return (

@@ -1,13 +1,12 @@
 "use client"
 
-import { Damon2Items, Track } from "@/types/types";
+import { Track } from "@/types/types";
 import { fmtMSS } from "@/util/clientUtils";
 import { Clock3, Music } from "lucide-react";
 import Image from "next/image";
-import { redirect, usePathname, useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Dispatch, SetStateAction, useState } from "react";
 import { MdPlayArrow } from "react-icons/md";
-import { Vibrant } from "node-vibrant/browser";
 
 interface Props {
   tracks: Track[];
@@ -28,13 +27,11 @@ export default function TracksTable({
   showHeader = false,
   showAlbum = false,
   i,
-  
 }: Props) {
+
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
   let keyCount = 0;
-  
-  //const res = Promise.resolve(color).then(result => {return result})
-  //console.log(res)
+
   return (
     <div>
       {showHeader && (

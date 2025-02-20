@@ -1,5 +1,4 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
-import SpotifyProvider from "next-auth/providers/spotify";
 import authOptions from '@/lib/configs/auth/authOptions'
 
 
