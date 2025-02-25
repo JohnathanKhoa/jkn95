@@ -10,7 +10,7 @@ export default function Page() {
           <div>
             <Link
               key={1}
-              href="https://nurtreeweb-git-main-johnathankhoas-projects.vercel.app/"
+              href="https://www.nurtree.com/"
               className="flex flex-col items-center justify-center text-sm duration-500 text-zinc-500 hover:text-zinc-300"
             >
               <Image className="rounded-xl pyobject-scale-down w-48 justify-self-center" src={NurtreeImage} alt="NurtreeImage"/>
