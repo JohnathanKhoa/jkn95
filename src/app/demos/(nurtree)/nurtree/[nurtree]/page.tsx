@@ -48,7 +48,7 @@ export default function Page() {
       </div>
       <div>
       <div className="text-center text-balance flex-col items-center justify-center">
-        Don't have an account? <Link className="underline" href="https://www.spotify.com/us/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up</Link> on their official website
+        <Link className="underline" href="https://www.spotify.com/us/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up</Link> on their official website
       </div>
       {/* <div className="text-center text-balance">
         <Link className="underline" href="">Use demo features</Link> without an account

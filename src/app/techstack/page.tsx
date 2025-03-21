@@ -3,7 +3,7 @@ import React from "react";
 export default function Page() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-balance font-serif antialiased opacity-80 pt-10">
+      <div className="flex flex-col items-center justify-center text-balance  antialiased opacity-100 pt-10">
         <h1>
         Tech Stack
         </h1>
