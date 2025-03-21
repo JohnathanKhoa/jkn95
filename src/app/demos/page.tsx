@@ -9,9 +9,11 @@ import BloggingServiceComponent from "@/components/BloggingServiceComponent";
 export default function Page() {
   return (
     <div className="content-center justify-self-center pt-10 px-8">
-      <p className="pb-10">*NonPublic. Please request me to include your email for access*</p>
-      <NurtreeComponent/>
-      <BloggingServiceComponent/>
+      <p className="pb-10">
+        *NonPublic. Please request me to include your email for access*
+      </p>
+      <NurtreeComponent />
+      <BloggingServiceComponent />
     </div>
   );
 }
