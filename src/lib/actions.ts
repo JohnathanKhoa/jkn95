@@ -1,4 +1,3 @@
-
 import {
   Album,
   Artist,
@@ -15,11 +14,10 @@ import {
   Damon2Items,
 } from "@/types/types";
 import { customGet } from "@/util/serverUtils";
-const { YTSearcher } = require('ytsearcher');
+const { YTSearcher } = require("ytsearcher");
 const YTKey = process.env.YOUTUBE_API_KEY;
 const searcher = new YTSearcher(YTKey);
 const youtubesearchapi = require("youtube-search-api");
-
 
 export const getNewReleases = async (
   session: AuthSession
@@ -108,7 +106,7 @@ export const getPlaylistsByCategory = async (
     `https://api.spotify.com/v1/browse/categories/${categoryId}/playlists`,
     session
   );
-  
+
   return data.playlists.items;
 };
 
@@ -162,24 +160,17 @@ export const getUserLikedSongs = async (
 export const getUserLikedPlaylists = async (
   session: AuthSession
 ): Promise<Playlist[]> => {
-  const currUrl = "https://api.spotify.com/v1/me/playlists?offset="
+  const currUrl = "https://api.spotify.com/v1/me/playlists?offset=";
   let offset = 0;
-  
-  const data = await customGet(
-    currUrl + offset,
-    session
-  );
+
+  const data = await customGet(currUrl + offset, session);
   const userData = data;
-  
-    offset = offset + 50;
-    const nextdata = await customGet(
-      currUrl + offset,
-      session
-    )
-    userData.items.push(...nextdata.items);
-  
+
+  offset = offset + 50;
+  const nextdata = await customGet(currUrl + offset, session);
+  userData.items.push(...nextdata.items);
+
   return userData.items;
-  
 };
 
 export const getPlaylistById = async (
@@ -204,8 +195,6 @@ export const getPlaylistById = async (
 
   return playlist;
 };
-
-
 
 export const getCategories = async (
   session: AuthSession
@@ -293,12 +282,15 @@ export const getYoutubeVideo = async (
   session: AuthSession,
   track: Track
 ): Promise<YTSearch> => {
-
   const name = track.name;
   const artist = track.artists[0].name;
-  
-  const result = searcher.search(name + artist, {type:'video'}, {maxResults:1});
-  
+
+  const result = searcher.search(
+    name + artist,
+    { type: "video" },
+    { maxResults: 1 }
+  );
+
   return await result;
 };
 
@@ -306,45 +298,52 @@ export const getYoutubeVideoDamon = async (
   session: AuthSession,
   track: Track
 ): Promise<Damon2Items> => {
-
   const name = track.name;
   const artist = track.artists[0].name;
 
-  const res =  await youtubesearchapi.GetListByKeyword(name + artist, [false], [1], [{type:"video"}]);
+  const res = await youtubesearchapi.GetListByKeyword(
+    name + artist,
+    [false],
+    [1],
+    [{ type: "video" }]
+  );
   const items = await res.items[0];
-  
+
   return await items;
 };
 
 export const getYoutubeVideoDamon2 = async (
   track: Track
 ): Promise<Damon2Items> => {
-
   const name = track.name;
   const artist = track.artists[0].name;
 
-  const res =  await youtubesearchapi.GetListByKeyword(name + artist, [false], [1], [{type:"video"}]);
+  const res = await youtubesearchapi.GetListByKeyword(
+    name + artist,
+    [false],
+    [1],
+    [{ type: "video" }]
+  );
   const items = await res.items[0];
-  
+
   return await items;
 };
 
-export const emailMQ = async (
-  email: string,
-
-) => {
-  const details = { "recipient": email, "msgBody": "Hello, this is a test email from https://jkn95.dev", "subject": "Test Email from jkn95dev.com" };
-  console.log(JSON.stringify(details))
-  const res = await fetch('https://amqp-1b09b6131ff7.herokuapp.com/sendMail', {
-    method: 'POST',
+export const emailMQ = async (email: string) => {
+  const details = {
+    recipient: email,
+    msgBody: "Hello, this is a test email from https://jkn95.dev",
+    subject: "Test Email from jkn95dev.com",
+  };
+  console.log(JSON.stringify(details));
+  const res = await fetch("https://amqp-1b09b6131ff7.herokuapp.com/sendMail", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin' : '*',
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     },
-    body: JSON.stringify(details)
+    body: JSON.stringify(details),
   });
-  const body = await res
+  const body = await res;
   return body.json;
-  
 };
-

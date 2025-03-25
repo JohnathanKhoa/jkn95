@@ -10,11 +10,9 @@ import RabbitMQComponent from "@/components/RabbitMQComponent";
 export default function Page() {
   return (
     <div className="content-center justify-self-center pt-10 px-8">
-      
       <RabbitMQComponent />
       <BloggingServiceComponent />
       <NurtreeComponent />
-      
     </div>
   );
 }

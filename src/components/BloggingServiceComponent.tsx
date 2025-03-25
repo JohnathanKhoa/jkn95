@@ -45,7 +45,7 @@ export default function BloggingServiceComponent() {
         >
           Java, Spring Framework, Hibernate
         </p>
-        
+
         <p
           className={
             hoveredDescription
@@ -54,16 +54,16 @@ export default function BloggingServiceComponent() {
           }
         >
           Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
-          </p>
-          <p
-            className={
-              hoveredDescription
-                ? "opacity-100 transition duration-900 text-center text-balance"
-                : "opacity-0 transition duration-900 text-center text-balance"
-            }
-          >
-            *NonPublic. Please request me to include your email for access*
-          </p>
+        </p>
+        <p
+          className={
+            hoveredDescription
+              ? "opacity-100 transition duration-900 text-center text-balance"
+              : "opacity-0 transition duration-900 text-center text-balance"
+          }
+        >
+          *NonPublic. Please request me to include your email for access*
+        </p>
       </div>
     </>
   );

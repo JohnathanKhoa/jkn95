@@ -5,10 +5,8 @@ export default function Page() {
     <>
       <div className="flex flex-col items-center justify-center text-balance  antialiased opacity-100 pt-10">
         <h1 className="">Tech Stack</h1>
-        
 
         <div className="text-pretty text-center p-8">
-          
           <div className="text-start">
             Languages: Java, JavaScript, TypeScript, HTML/Markdown,
             Tailwind/CSS, Python, SQL, Linux
@@ -41,7 +39,9 @@ export default function Page() {
 
           <br />
           <br />
-          <div className="text-start">Version Control: Github, Teamforge, Heroku</div>
+          <div className="text-start">
+            Version Control: Github, Teamforge, Heroku
+          </div>
 
           <br />
           <br />
