@@ -4,42 +4,56 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-balance  antialiased opacity-100 pt-10">
-        <h1 className="border-b-slate-500">Tech Stack</h1>
-        <div className="w-1/2 border"></div>
+        <h1 className="">Tech Stack</h1>
+        
 
-        <div className="text-pretty text-center px-8">
+        <div className="text-pretty text-center p-8">
+          
+          <div className="text-start">
+            Languages: Java, JavaScript, TypeScript, HTML/Markdown,
+            Tailwind/CSS, Python, SQL, Linux
+          </div>
+
           <br />
           <br />
-          Languages: Java, JavaScript, TypeScript, HTML/Markdown, Tailwind/CSS,
-          Python, SQL, Linux
+          <div className="text-start">
+            Frontend: Angular, React, NextJS, Vercel, Retool
+          </div>
+
           <br />
           <br />
-          Frontend: Angular, React, NextJS, Vercel, Retool
+          <div className="text-start">
+            Backend: Spring Framework, MySQL, Oracle, MongoDB, JDBC, Hibernate,
+            Microservices
+          </div>
+
           <br />
           <br />
-          Backend: Spring Framework, MySQL, Oracle, MongoDB, JDBC, Hibernate,
-          Microservices
+          <div className="text-start">AWS: Elastic Beanstalk, EC2, RDS, S3</div>
+
           <br />
           <br />
-          AWS: Elastic Beanstalk, EC2, RDS, S3
+          <div className="text-start">Containerization: Docker, Kubernetes</div>
+
           <br />
           <br />
-          Containerization: Docker, Kubernetes
+          <div className="text-start">Automation: Jenkins</div>
+
           <br />
           <br />
-          Automation: Jenkins
+          <div className="text-start">Version Control: Github, Teamforge, Heroku</div>
+
           <br />
           <br />
-          Version Control: Github, Teamforge
+          <div className="text-start">Testing: Cypress, JUnit, Postman</div>
+
           <br />
           <br />
-          Testing: Cypress, JUnit, Postman
+          <div className="text-start">OS: Linux, Windows</div>
+
           <br />
           <br />
-          OS: Linux, Windows
-          <br />
-          <br />
-          IDE: IntelliJ, VSCode
+          <div className="text-start">IDE: IntelliJ, VSCode</div>
         </div>
       </div>
     </>

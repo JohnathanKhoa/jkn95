@@ -12,8 +12,9 @@ export default function Page() {
     <div className="content-center justify-self-center pt-10 px-8">
       
       <RabbitMQComponent />
-      <NurtreeComponent />
       <BloggingServiceComponent />
+      <NurtreeComponent />
+      
     </div>
   );
 }

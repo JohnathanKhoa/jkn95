@@ -11,7 +11,7 @@ export default function BloggingServiceComponent() {
 
   return (
     <>
-      <div className="pt-10">
+      <div className="pt-2 ">
         <Link
           key={1}
           href="https://johnathankhoa.retool.com/app/blogportfolio/Home"
