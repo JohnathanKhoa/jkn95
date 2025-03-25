@@ -4,7 +4,9 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-balance  antialiased opacity-100 pt-10">
-        <h1>Tech Stack</h1>
+        <h1 className="border-b-slate-500">Tech Stack</h1>
+        <div className="w-1/2 border"></div>
+
         <div className="text-pretty text-center px-8">
           <br />
           <br />

@@ -30,8 +30,8 @@ export default function BloggingServiceComponent() {
         <p
           className={
             hoveredDescription
-              ? "opacity-100 transition duration-500 text-center text-balance"
-              : "opacity-0 transition duration-500 text-center text-balance"
+              ? "opacity-100 transition duration-300 text-center text-balance"
+              : "opacity-0 transition duration-300 text-center text-balance"
           }
         >
           Send, store, and modify messages in the AWS cloud
@@ -39,12 +39,13 @@ export default function BloggingServiceComponent() {
         <p
           className={
             hoveredDescription
-              ? "opacity-100 transition duration-600 text-center text-balance"
-              : "opacity-0 transition duration-600 text-center text-balance"
+              ? "opacity-100 transition duration-500 text-center text-balance"
+              : "opacity-0 transition duration-500 text-center text-balance"
           }
         >
-          Java, Spring Framework
+          Java, Spring Framework, Hibernate
         </p>
+        
         <p
           className={
             hoveredDescription
@@ -52,36 +53,17 @@ export default function BloggingServiceComponent() {
               : "opacity-0 transition duration-700 text-center text-balance"
           }
         >
-          Maven, HTTP, REST API
-        </p>
-        <p
-          className={
-            hoveredDescription
-              ? "opacity-100 transition duration-800 text-center text-balance"
-              : "opacity-0 transition duration-800 text-center text-balance"
-          }
-        >
-          JPA, JDBC, Hibernate, SQL Datasource, Jakarta, Lombok
-        </p>
-        <p
-          className={
-            hoveredDescription
-              ? "opacity-100 transition duration-900 text-center text-balance"
-              : "opacity-0 transition duration-900 text-center text-balance"
-          }
-        >
-          AWS Elastic Beanstalk, EC2, RDS, S3
+          Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
           </p>
           <p
             className={
               hoveredDescription
-                ? "opacity-100 transition duration-1000 text-center text-balance"
-                : "opacity-0 transition duration-1000 text-center text-balance"
+                ? "opacity-100 transition duration-900 text-center text-balance"
+                : "opacity-0 transition duration-900 text-center text-balance"
             }
           >
-            Retool, JavaScript, TypeScript, React
+            *NonPublic. Please request me to include your email for access*
           </p>
-        
       </div>
     </>
   );

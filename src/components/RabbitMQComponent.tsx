@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import NurtreeImage from "@/public/images/nurtree.png";
+import RabbitMQImage from "@/public/images/rabbitmq-logo-png-transparent.png";
 import { useState } from "react";
 
-export default function NurtreeComponent() {
+export default function RabbitMQComponent() {
   const [hoveredDescription, setHoveredDescription] = useState<boolean | null>(
     false
   );
@@ -15,17 +15,17 @@ export default function NurtreeComponent() {
       <div>
         <Link
           key={1}
-          href="https://www.nurtree.com/"
+          href="/demos/rabbitmq/"
           className="flex flex-col items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
         >
           <Image
             className="rounded-xl pyobject-scale-down w-48 justify-self-center"
-            src={NurtreeImage}
+            src={RabbitMQImage}
             alt="NurtreeImage"
             onMouseEnter={() => setHoveredDescription(true)}
             onMouseLeave={() => setHoveredDescription(false)}
           />
-          <div className="justify-self-center">Nurtree</div>
+          <div className="justify-self-center">RabbitMQ</div>
         </Link>
         <div>
           <p
@@ -35,7 +35,7 @@ export default function NurtreeComponent() {
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            A blend of Spotify and Youtube API
+            Send emails to a queue and have them processed by a worker
             <br></br>
           </p>
           <p
@@ -45,8 +45,7 @@ export default function NurtreeComponent() {
                 : "opacity-0 transition duration-500 text-center text-balance"
             }
           >
-            Play all the top music videos using your own curated Spotify
-            playlists
+            Java, Spring Framework, RabbitMQ
           </p>
           <p
             className={
@@ -55,16 +54,7 @@ export default function NurtreeComponent() {
                 : "opacity-0 transition duration-700 text-center text-balance"
             }
           >
-            Vercel, NextJS, TypeScript, JavaScript, HTML, Tailwind/CSS
-          </p>
-          <p
-            className={
-              hoveredDescription
-                ? "opacity-100 transition duration-900 text-center text-balance"
-                : "opacity-0 transition duration-900 text-center text-balance"
-            }
-          >
-            *NonPublic. Please request me to include your email for access*
+            AWS MQ, Heroku, Docker
           </p>
         </div>
       </div>

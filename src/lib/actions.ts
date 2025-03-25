@@ -1,3 +1,4 @@
+
 import {
   Album,
   Artist,
@@ -328,5 +329,22 @@ export const getYoutubeVideoDamon2 = async (
   return await items;
 };
 
+export const emailMQ = async (
+  email: string,
 
+) => {
+  const details = { "recipient": email, "msgBody": "Hello, this is a test email from https://jkn95.dev", "subject": "Test Email from jkn95dev.com" };
+  console.log(JSON.stringify(details))
+  const res = await fetch('https://amqp-1b09b6131ff7.herokuapp.com/sendMail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin' : '*',
+    },
+    body: JSON.stringify(details)
+  });
+  const body = await res
+  return body.json;
+  
+};
 
