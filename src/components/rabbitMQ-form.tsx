@@ -47,21 +47,21 @@ export default function RabbitMQForm() {
 
   return (
     <Form {...form}>
-      <div className=" space-y-6">
+      <div className=" space-y-3">
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="text-white p-4 md:p-16 border-[1.5px] rounded-lg border-gray-300 flex flex-col items-center justify-center gap-y-6"
+          className="bg-[#ff6600] text-white p-4 rounded flex flex-col items-center justify-center gap-y-6"
         >
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem>
-                <FormLabel>Provide Email</FormLabel>
+              <FormItem className="flex flex-col items-center justify-center gap-y-2">
+                <FormLabel className="text-black font-semibold text-3xl font-sans">RabbitMQ Demo</FormLabel>
                 <FormControl>
                   <Input
-                    className="text-white"
-                    placeholder="Provide Email"
+                    className="text-white font-normal"
+                    placeholder="Email"
                     {...field}
                     type="text"
                   />
@@ -72,7 +72,7 @@ export default function RabbitMQForm() {
 
           <Button
             type="submit"
-            className="rounded-xl  hover:bg-slate-300 transition duration-300 bg-slate-500 "
+            className="rounded-xl text-black hover:text-zinc-300 hover:bg-black transition duration-300 bg-white "
             disabled={form.formState.isSubmitting}
           >
             Submit

@@ -12,12 +12,13 @@ export default function RabbitMQComponent() {
   return (
     <>
       {}
-      <div>
+      <div className="flex flex-row items-center justify-end gap-10 font-mono">
         <Link
           key={1}
           href="/demos/rabbitmq/"
-          className="flex flex-col items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
+          className=" items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
         >
+          <div>
           <Image
             className="rounded-xl pyobject-scale-down w-48 justify-self-center"
             src={RabbitMQImage}
@@ -26,8 +27,9 @@ export default function RabbitMQComponent() {
             onMouseLeave={() => setHoveredDescription(false)}
           />
           <div className="justify-self-center">RabbitMQ</div>
+          </div>
         </Link>
-        <div>
+        <div className="">
           <p
             className={
               hoveredDescription
@@ -35,7 +37,7 @@ export default function RabbitMQComponent() {
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            Send emails to a queue and have them processed by a worker
+            Add your emails to a message queue and have them processed by a worker
             <br></br>
           </p>
           <p

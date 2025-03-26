@@ -12,7 +12,7 @@ export default function NurtreeComponent() {
   return (
     <>
       {}
-      <div>
+      <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono">
         <Link
           key={1}
           href="https://www.nurtree.com/"
@@ -64,7 +64,7 @@ export default function NurtreeComponent() {
                 : "opacity-0 transition duration-900 text-center text-balance"
             }
           >
-            *NonPublic. Please request me to include your email for access*
+            ~ Development Mode. Please request me to include your email for access ~
           </p>
         </div>
       </div>

@@ -11,10 +11,10 @@ export default function BloggingServiceComponent() {
 
   return (
     <>
-      <div className="pt-2 ">
+      <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono">
         <Link
           key={1}
-          href="https://johnathankhoa.retool.com/app/blogportfolio/Home"
+          href="/demos/blog"
           className="flex flex-col items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
         >
           <Image
@@ -24,17 +24,18 @@ export default function BloggingServiceComponent() {
             onMouseEnter={() => setHoveredDescription(true)}
             onMouseLeave={() => setHoveredDescription(false)}
           />
-          <div className="justify-self-center">Blogging Service</div>
+          <div className="justify-self-center">Cloud Web Service</div>
         </Link>
-
+        <div>
         <p
           className={
             hoveredDescription
-              ? "opacity-100 transition duration-300 text-center text-balance"
-              : "opacity-0 transition duration-300 text-center text-balance"
+              ? "opacity-100  transition duration-300 text-center text-balance"
+              : "opacity-0  transition duration-300 text-center text-balance"
           }
         >
-          Send, store, and modify messages in the AWS cloud
+          Authenticate with email and submit user request for query access
+           
         </p>
         <p
           className={
@@ -43,7 +44,8 @@ export default function BloggingServiceComponent() {
               : "opacity-0 transition duration-500 text-center text-balance"
           }
         >
-          Java, Spring Framework, Hibernate
+          Send, view, and modify database queries in the AWS cloud
+           
         </p>
 
         <p
@@ -53,7 +55,8 @@ export default function BloggingServiceComponent() {
               : "opacity-0 transition duration-700 text-center text-balance"
           }
         >
-          Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
+          Java, Spring Framework, Hibernate, OAuth
+           
         </p>
         <p
           className={
@@ -62,8 +65,9 @@ export default function BloggingServiceComponent() {
               : "opacity-0 transition duration-900 text-center text-balance"
           }
         >
-          *NonPublic. Please request me to include your email for access*
+          Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
         </p>
+        </div>
       </div>
     </>
   );
