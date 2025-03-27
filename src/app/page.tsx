@@ -9,7 +9,7 @@ export default function Home() {
         className=" flex flex-row items-center gap-2 text-lg  text-zinc-500 duration-200 hover:text-white "
         href="mailto:johnathan.k.nguyen.95@gmail.com"
       >
-        <AtSign/>
+        <AtSign />
         Email
       </a>
       <a
@@ -18,7 +18,7 @@ export default function Home() {
         target="_blank"
         download="Resume-JohnathanKhoaNguyen.pdf"
       >
-        <FileUser/>
+        <FileUser />
         Resume
       </a>
       <a
@@ -26,7 +26,7 @@ export default function Home() {
         href="https://github.com/JohnathanKhoa"
         target="_blank"
       >
-        <Github/>
+        <Github />
         Github
       </a>
       <a
@@ -34,7 +34,7 @@ export default function Home() {
         href="https://www.linkedin.com/in/johnawin/"
         target="_blank"
       >
-        <Linkedin/>
+        <Linkedin />
         LinkedIn
       </a>
     </div>

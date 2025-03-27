@@ -19,14 +19,14 @@ export default function RabbitMQComponent() {
           className=" items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
         >
           <div>
-          <Image
-            className="rounded-xl pyobject-scale-down w-48 justify-self-center"
-            src={RabbitMQImage}
-            alt="NurtreeImage"
-            onMouseEnter={() => setHoveredDescription(true)}
-            onMouseLeave={() => setHoveredDescription(false)}
-          />
-          <div className="justify-self-center">RabbitMQ</div>
+            <Image
+              className="rounded-xl pyobject-scale-down w-48 justify-self-center"
+              src={RabbitMQImage}
+              alt="NurtreeImage"
+              onMouseEnter={() => setHoveredDescription(true)}
+              onMouseLeave={() => setHoveredDescription(false)}
+            />
+            <div className="justify-self-center">RabbitMQ</div>
           </div>
         </Link>
         <div className="">
@@ -37,7 +37,19 @@ export default function RabbitMQComponent() {
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            Add your emails to a message queue and have them processed by a worker
+            Add your email to a message queue and have them processed by a
+            worker
+            <br></br>
+          </p>
+          <p
+            className={
+              hoveredDescription
+                ? "opacity-100 transition duration-300 text-center text-balance"
+                : "opacity-0 transition duration-300 text-center text-balance"
+            }
+          >
+            Optional: Include guest credentials for Cloud Web Service and
+            Nurtree App
             <br></br>
           </p>
           <p

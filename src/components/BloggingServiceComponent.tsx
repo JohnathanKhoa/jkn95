@@ -27,46 +27,43 @@ export default function BloggingServiceComponent() {
           <div className="justify-self-center">Cloud Web Service</div>
         </Link>
         <div>
-        <p
-          className={
-            hoveredDescription
-              ? "opacity-100  transition duration-300 text-center text-balance"
-              : "opacity-0  transition duration-300 text-center text-balance"
-          }
-        >
-          Authenticate with email and submit user request for query access
-           
-        </p>
-        <p
-          className={
-            hoveredDescription
-              ? "opacity-100 transition duration-500 text-center text-balance"
-              : "opacity-0 transition duration-500 text-center text-balance"
-          }
-        >
-          Send, view, and modify database queries in the AWS cloud
-           
-        </p>
+          <p
+            className={
+              hoveredDescription
+                ? "opacity-100  transition duration-300 text-center text-balance"
+                : "opacity-0  transition duration-300 text-center text-balance"
+            }
+          >
+            Authenticate with email and submit user request for query access
+          </p>
+          <p
+            className={
+              hoveredDescription
+                ? "opacity-100 transition duration-500 text-center text-balance"
+                : "opacity-0 transition duration-500 text-center text-balance"
+            }
+          >
+            Send, view, and modify database queries in the AWS cloud
+          </p>
 
-        <p
-          className={
-            hoveredDescription
-              ? "opacity-100 transition duration-700 text-center text-balance"
-              : "opacity-0 transition duration-700 text-center text-balance"
-          }
-        >
-          Java, Spring Framework, Hibernate, OAuth
-           
-        </p>
-        <p
-          className={
-            hoveredDescription
-              ? "opacity-100 transition duration-900 text-center text-balance"
-              : "opacity-0 transition duration-900 text-center text-balance"
-          }
-        >
-          Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
-        </p>
+          <p
+            className={
+              hoveredDescription
+                ? "opacity-100 transition duration-700 text-center text-balance"
+                : "opacity-0 transition duration-700 text-center text-balance"
+            }
+          >
+            Java, Spring Framework, Hibernate, OAuth
+          </p>
+          <p
+            className={
+              hoveredDescription
+                ? "opacity-100 transition duration-900 text-center text-balance"
+                : "opacity-0 transition duration-900 text-center text-balance"
+            }
+          >
+            Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
+          </p>
         </div>
       </div>
     </>

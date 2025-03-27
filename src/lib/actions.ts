@@ -332,8 +332,30 @@ export const getYoutubeVideoDamon2 = async (
 export const emailMQ = async (email: string) => {
   const details = {
     recipient: email,
-    msgBody: "Hello, this is a test email from https://jkn95.dev",
-    subject: "Test Email from jkn95dev.com",
+    msgBody:
+      "Hello, this is a sample email sent from https://jkn95.dev using RabbitMQ.",
+    subject: "RabbitMQ Email from https://jkn95dev.com",
+  };
+  console.log(JSON.stringify(details));
+  const res = await fetch("https://amqp-1b09b6131ff7.herokuapp.com/sendMail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+    body: JSON.stringify(details),
+  });
+  const body = await res;
+  return body.json;
+};
+
+export const emailAndCredMQ = async (email: string) => {
+  const details = {
+    recipient: email,
+    msgBody:
+      "Cloud Web Service guest credentials:\nUsername: guest-user@jkn95.dev\nPassword: !retool1234\n\n" +
+      "\nNurtree guest credentials:\nUsername: guest-user@jkn95.dev\nPassword: !spotify1234\n\n ",
+    subject: "Guest credentials for demos from https://jkn95.dev",
   };
   console.log(JSON.stringify(details));
   const res = await fetch("https://amqp-1b09b6131ff7.herokuapp.com/sendMail", {

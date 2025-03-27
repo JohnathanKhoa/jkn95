@@ -1,4 +1,4 @@
-import { emailMQ } from "@/lib/actions";
+import { emailAndCredMQ } from "@/lib/actions";
 import React from "react";
 
 interface Props {
@@ -10,7 +10,7 @@ export default async function Page({ params }: Props) {
   const param = await params;
   const d = decodeURIComponent(param.email);
 
-  const response = await emailMQ(d);
+  const response = await emailAndCredMQ(d);
   return (
     <div className="flex flex-col content-center justify-self-center pt-10 px-8">
       <p className="pb-10">Email sent to {d}. Please check your inbox.</p>

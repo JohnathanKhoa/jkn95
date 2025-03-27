@@ -167,7 +167,7 @@ export interface Suggestion {
 }
 
 export interface Damon2 {
-  items:Damon2Items[];
+  items: Damon2Items[];
   nextPage: {};
 }
 
@@ -178,7 +178,7 @@ export interface Damon2Items {
   title: string;
   channelTitle: string;
   shortBylineText: { runs: [Array] };
-  length: { accessibility: [Object], simpleText: '2:58' };
+  length: { accessibility: [Object]; simpleText: "2:58" };
   isLive: false;
 }
 

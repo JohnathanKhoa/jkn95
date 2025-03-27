@@ -19,11 +19,13 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
+import { Check } from "lucide-react";
 
 const FormSchema = z.object({
   email: z.string().email({
     message: "Invalid email address.",
   }),
+  Checkbox: z.boolean().optional(),
 });
 
 type FormData = z.infer<typeof FormSchema>;
@@ -35,14 +37,19 @@ export default function RabbitMQForm() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       email: "",
+      Checkbox: false,
     },
   });
 
   const onSubmit = async (data: FormData) => {
     console.log("Submitting form", data);
 
-    const { email } = data;
-    router.push(`/demos/rabbitmq/${encodeURIComponent(email)}`);
+    const email = data.email;
+    if (data.Checkbox === true) {
+      router.push(`/demos/rabbitmq/${encodeURIComponent(email)}/cred`);
+    } else {
+      router.push(`/demos/rabbitmq/${encodeURIComponent(email)}`);
+    }
   };
 
   return (
@@ -57,7 +64,9 @@ export default function RabbitMQForm() {
             name="email"
             render={({ field }) => (
               <FormItem className="flex flex-col items-center justify-center gap-y-2">
-                <FormLabel className="text-black font-semibold text-3xl font-sans">RabbitMQ Demo</FormLabel>
+                <FormLabel className="text-black font-semibold text-3xl font-sans">
+                  RabbitMQ Demo
+                </FormLabel>
                 <FormControl>
                   <Input
                     className="text-white font-normal"
@@ -70,6 +79,25 @@ export default function RabbitMQForm() {
             )}
           />
 
+          <FormField
+            control={form.control}
+            name="Checkbox"
+            render={({ field }) => (
+              <FormItem className="flex items-start gap-x-2">
+                <FormControl>
+                  <Input
+                    className="w-4"
+                    type="checkbox"
+                    checked={field.value}
+                    onChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="flex text-black font-semibold text-sm font-sans">
+                  I would like to recieve guest credentials for the other demos
+                </FormLabel>
+              </FormItem>
+            )}
+          />
           <Button
             type="submit"
             className="rounded-xl text-black hover:text-zinc-300 hover:bg-black transition duration-300 bg-white "

@@ -64,7 +64,8 @@ export default function NurtreeComponent() {
                 : "opacity-0 transition duration-900 text-center text-balance"
             }
           >
-            ~ Development Mode. Please request me to include your email for access ~
+            ~ Development Mode. Please request me to include your email for
+            access ~
           </p>
         </div>
       </div>
