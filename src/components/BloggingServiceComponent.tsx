@@ -34,7 +34,7 @@ export default function BloggingServiceComponent() {
                 : "opacity-0  transition duration-300 text-center text-balance"
             }
           >
-            Authenticate with email and submit user request for query access
+            Auth secured with roles and permissions to manage query access and visibility
           </p>
           <p
             className={
@@ -43,7 +43,7 @@ export default function BloggingServiceComponent() {
                 : "opacity-0 transition duration-500 text-center text-balance"
             }
           >
-            Send, view, and modify database queries in the AWS cloud
+            Save, update, retrieve, and remove queried data in the AWS cloud
           </p>
 
           <p

@@ -9,51 +9,60 @@ export default function Page() {
         <div className="text-pretty text-center p-8">
           <div className="text-start">
             Languages: Java, JavaScript, TypeScript, HTML/Markdown,
-            Tailwind/CSS, Python, SQL, Linux
+            Tailwind/CSS, Bash, Python, SQL
           </div>
-
           <br />
           <br />
           <div className="text-start">
-            Frontend: Angular, React, NextJS, Vercel, Retool
+            Frontend: Angular, React, NextJS, Retool, JSP, Thymeleaf
           </div>
-
           <br />
           <br />
           <div className="text-start">
-            Backend: Spring Framework, MySQL, Oracle, MongoDB, JDBC, Hibernate,
-            Microservices
+            Backend: Maven, Spring Framework, Hibernate, Eureka, OpenFeign,
+            Gateway, Batch, Load Balancer, NodeJS
           </div>
-
-          <br />
-          <br />
-          <div className="text-start">AWS: Elastic Beanstalk, EC2, RDS, S3</div>
-
-          <br />
-          <br />
-          <div className="text-start">Containerization: Docker, Kubernetes</div>
-
-          <br />
-          <br />
-          <div className="text-start">Automation: Jenkins</div>
-
           <br />
           <br />
           <div className="text-start">
-            Version Control: Github, Teamforge, Heroku
+            Database: MySQL, MSSQL, Oracle, DynamoDB, MongoDB
           </div>
+          <br />
+          <br />
+          <div className="text-start">
+            Security: OAuth2.0, NextAuth, JWT, Session
+          </div>
+          <br />
+          <br />
+          <div className="text-start">
+            Containerization & Deployment: Docker, Kubernetes, Heroku, Vercel
+          </div>
+          <br />
+          <br />
+          <div className="text-start">
+            AWS: Elastic Beanstalk, EC2, RDS, S3, MQ
+          </div>
+          <br />
+          <br />
+          <div className="text-start">AMQP Messaging: RabbitMQ</div>
+          <br />
+          <br />
 
+          <div className="text-start">Automation: Jenkins, Autosys</div>
           <br />
           <br />
-          <div className="text-start">Testing: Cypress, JUnit, Postman</div>
-
+          <div className="text-start">
+            Version Control: Github, Teamforge, Bitbucket, GitLab
+          </div>
           <br />
           <br />
-          <div className="text-start">OS: Linux, Windows</div>
-
+          <div className="text-start">Testing: JUnit, Postman</div>
           <br />
           <br />
-          <div className="text-start">IDE: IntelliJ, VSCode</div>
+          <div className="text-start">OS: Linux (RHEL, Ubuntu), Windows</div>
+          <br />
+          <br />
+          <div className="text-start">IDE: Eclipse, IntelliJ, VSCode</div>
         </div>
       </div>
     </>

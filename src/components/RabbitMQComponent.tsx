@@ -48,7 +48,7 @@ export default function RabbitMQComponent() {
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            Optional: Include guest credentials for Cloud Web Service and
+            Optional: Request guest credentials for Cloud Web Service and
             Nurtree App
             <br></br>
           </p>

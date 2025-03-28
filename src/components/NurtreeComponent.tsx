@@ -55,7 +55,7 @@ export default function NurtreeComponent() {
                 : "opacity-0 transition duration-700 text-center text-balance"
             }
           >
-            Vercel, NextJS, TypeScript, JavaScript, HTML, Tailwind/CSS
+            Vercel, NextJS, TypeScript, JavaScript, HTML, Tailwind/CSS, NextAuth, Zustand
           </p>
           <p
             className={
