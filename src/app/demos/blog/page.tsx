@@ -5,7 +5,7 @@ export default function Page() {
         className="w-screen"
         src="https://johnathankhoa.retool.com/apps/blogPortfolio"
         width="100%"
-        height="800px"
+        
       />
     </div>
   );

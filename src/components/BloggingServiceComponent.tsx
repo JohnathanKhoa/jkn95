@@ -34,7 +34,7 @@ export default function BloggingServiceComponent() {
                 : "opacity-0  transition duration-300 text-center text-balance"
             }
           >
-            Auth secured with roles and permissions to manage query access and visibility
+            OAuth secured with managed roles and permissions to handle query access and visibility
           </p>
           <p
             className={

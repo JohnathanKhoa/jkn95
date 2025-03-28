@@ -24,7 +24,7 @@ export default function Page() {
           Coding enthusiast, web developer, software engineer
           <br />
           <br />
-          Born and raised in Southern California, Orange County
+          Born and raised in Chino Hills, California. San Bernardino County
           <br />
           <br />
           Had my first computer at 10 years old and wanted to be a developer ever since
@@ -39,7 +39,15 @@ export default function Page() {
           Moved across the states for work, gaining more experience and strengthening my tech stack
           <br />
           <br />
-          Pursuing higher levels in career and personal growth
+          Now keeping steady track to pursue higher levels in career and personal growth
+          <br />
+          <br />
+          <br />
+          <br />
+          *Fun fact I am the middle chile of 5 siblings, all brothers.*
+          <div>
+
+          </div>
         </div>
         </div>
       </div>
