@@ -1,14 +1,14 @@
 import React from "react";
 import About from "../markdown/about.mdx";
-import ProfileImage from "@/public/images/Prf.jpg";
+import ProfileImage from "@/public/images/ProfileImage2.png";
 import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="pt-24 flex flex-row items-center justify-center text-balance  antialiased opacity-100">
+      <div className="pt-24 flex flex-col items-center justify-center text-balance  antialiased opacity-100">
         <div className="">
           <Image
-            className="pyobject-scale-down rounded-xl w-96 justify-self-center"
+            className="pyobject-scale-down rounded-xl w-48 justify-self-center"
             src={ProfileImage}
             alt="Image"
           />
@@ -31,24 +31,23 @@ export default function Page() {
             <br />
             <br />
             Started programming in high school, taking extra credit classes and
-            learning Java and C++
+            learning Java, Python, and C++
             <br />
             <br />
             Majored in Computer Science at Cal Poly Pomona and graduated with a
             Bachelors of Science
             <br />
             <br />
-            Moved across the states for work, gaining more experience and
-            strengthening my tech stack
+            Moved across the states for work, gaining experience working with Spring Microservices
             <br />
             <br />
-            Now keeping steady track to pursue higher levels in career and
-            personal growth
+            Now keeping steady track to pursue higher levels in all stacks and
+            languages
             <br />
             <br />
             <br />
             <br />
-            *Fun fact I am the middle chile of 5 siblings, all brothers.*
+            *Fun fact I am the middle child of 5 siblings, all brothers.*
             <div></div>
           </div>
         </div>

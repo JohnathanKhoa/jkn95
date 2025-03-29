@@ -57,7 +57,7 @@ export default function RabbitMQForm() {
       <div className=" space-y-3">
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="bg-[#ff6600] text-white p-4 rounded flex flex-col items-center justify-center gap-y-6"
+          className="bg-[#ff6600] bg-opacity-80 text-white p-4 rounded flex flex-col items-center justify-center gap-y-6"
         >
           <FormField
             control={form.control}
