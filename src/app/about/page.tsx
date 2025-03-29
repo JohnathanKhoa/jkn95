@@ -40,10 +40,13 @@ export default function Page() {
             Moved across the states for work, gaining experience building Microservices with Spring
             <br />
             <br />
-            Built services for shipping, human resources, loan processing
+            Worked on services for shipping, human resources, loan processing
             <br />
             <br />
-            Now keeping steady track to pursue higher levels in all stacks and
+            Further proceeded into full-stack, building out web applications using React and NextJS
+            <br />
+            <br />
+            Now keeping steady track to pursue higher levels in all tools and
             languages
             <br />
             <br />
