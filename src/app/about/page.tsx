@@ -26,8 +26,7 @@ export default function Page() {
             Born and raised in Chino Hills, California. San Bernardino County
             <br />
             <br />
-            Had my first computer at 10 years old and wanted to be a developer
-            ever since
+            Had my first computer at 10 years old and found a love for technology
             <br />
             <br />
             Started programming in high school, taking extra credit classes and
@@ -38,7 +37,10 @@ export default function Page() {
             Bachelors of Science
             <br />
             <br />
-            Moved across the states for work, gaining experience working with Spring Microservices
+            Moved across the states for work, gaining experience building Microservices with Spring
+            <br />
+            <br />
+            Built services for shipping, human resources, loan processing
             <br />
             <br />
             Now keeping steady track to pursue higher levels in all stacks and
