@@ -6,15 +6,15 @@ export default function Page() {
   return (
     <>
       <div className="pt-24 flex flex-col items-center justify-center text-balance  antialiased opacity-100">
-        <div className="">
+        {/* <div className="">
           <Image
             className="pyobject-scale-down rounded-xl w-48 justify-self-center"
             src={ProfileImage}
             alt="Image"
           />
-        </div>
+        </div> */}
 
-        <div className="flex flex-col items-center justify-center text-balance">
+        <div className="flex flex-col items-center justify-center text-balance text-zinc-500">
           <h2 className="pt-2">Johnathan Nguyen</h2>
           <h3 className="pt-10">About me</h3>
           <div className="text-pretty text-center px-8">

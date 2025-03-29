@@ -12,7 +12,7 @@ export default function NurtreeComponent() {
   return (
     <>
       {}
-      <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono">
+      <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
         <Link
           key={1}
           href="https://www.nurtree.com/"

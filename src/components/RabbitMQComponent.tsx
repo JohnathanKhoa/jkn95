@@ -12,7 +12,7 @@ export default function RabbitMQComponent() {
   return (
     <>
       {}
-      <div className="flex flex-row items-center justify-end gap-10 font-mono">
+      <div className="flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
         <Link
           key={1}
           href="/demos/rabbitmq/"
