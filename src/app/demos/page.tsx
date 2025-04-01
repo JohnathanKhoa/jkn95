@@ -1,15 +1,17 @@
 import React from "react";
-import NurtreeComponent from "@/components/NurtreeComponent";
-import BloggingServiceComponent from "@/components/BloggingServiceComponent";
-import RabbitMQComponent from "@/components/RabbitMQComponent";
+import NurtreeHero from "@/components/hero/NurtreeHero";
+import RetoolHero from "@/components/hero/RetoolHero";
+import RabbitMQHero from "@/components/hero/RabbitMQHero";
+import CatalystHero from "@/components/hero/CatalystHero";
 
 export default function Page() {
   return (
-    <div className="content-center justify-self-center pt-10 px-8">
+    <div className="items-center justify-content-start pt-10 px-8">
       <div className="flex flex-col  items-start justify-end pt-10 px-8">
-        <RabbitMQComponent />
-        <BloggingServiceComponent />
-        <NurtreeComponent />
+        <CatalystHero />
+        <RabbitMQHero />
+        <RetoolHero />
+        <NurtreeHero />
       </div>
     </div>
   );

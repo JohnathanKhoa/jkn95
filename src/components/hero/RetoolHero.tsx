@@ -4,7 +4,7 @@ import Link from "next/link";
 import RetoolImage from "@/public/images/cloud.png";
 import { useState } from "react";
 
-export default function BloggingServiceComponent() {
+export default function RetoolHero() {
   const [hoveredDescription, setHoveredDescription] = useState<boolean | null>(
     false
   );
@@ -24,7 +24,7 @@ export default function BloggingServiceComponent() {
             onMouseEnter={() => setHoveredDescription(true)}
             onMouseLeave={() => setHoveredDescription(false)}
           />
-          <div className="justify-self-center">Cloud Web Service</div>
+          <div className="justify-self-center">Retool + Spring + AWS</div>
         </Link>
         <div>
           <p

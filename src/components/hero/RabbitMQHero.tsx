@@ -4,7 +4,7 @@ import Link from "next/link";
 import RabbitMQImage from "@/public/images/rabbitmq-logo-png-transparent.png";
 import { useState } from "react";
 
-export default function RabbitMQComponent() {
+export default function RabbitMQHero() {
   const [hoveredDescription, setHoveredDescription] = useState<boolean | null>(
     false
   );

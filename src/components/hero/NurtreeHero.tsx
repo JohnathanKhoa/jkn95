@@ -4,7 +4,7 @@ import Link from "next/link";
 import NurtreeImage from "@/public/images/nurtree.png";
 import { useState } from "react";
 
-export default function NurtreeComponent() {
+export default function NurtreeHero() {
   const [hoveredDescription, setHoveredDescription] = useState<boolean | null>(
     false
   );
