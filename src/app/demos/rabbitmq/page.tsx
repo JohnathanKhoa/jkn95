@@ -4,9 +4,9 @@ import RabbitMQForm from "@/components/rabbitMQ-form";
 export default function Page() {
   return (
     <div className="content-center justify-self-center pt-10 px-8 text-zinc-500">
-      <p className="pb-10">
+      {/* <p className="pb-10">
         Provide your email to recieve a message from the RabbitMQ broker
-      </p>
+      </p> */}
       <RabbitMQForm />
     </div>
   );
