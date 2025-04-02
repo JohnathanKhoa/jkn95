@@ -14,9 +14,9 @@ export default function Home() {
       </a>
       <a
         className="flex flex-row items-center gap-2 text-3xl text-zinc-500 duration-200 hover:text-white "
-        href="https://docs.google.com/document/d/1Fd-Qe95ZzFf1JMo5DylJWWOUb0UgGAgpPuUYYbrzAVs/edit?usp=sharing"
+        href="https://docs.google.com/document/d/1mGLYQJzevyh9Ri85ePtBmVh80Wo0epS9fLyG7XrIkIw/edit?usp=sharing"
         target="_blank"
-        download="jkn95.dev-resume.pdf"
+        download="JohnathanKhoaNguyenResume.pdf"
       >
         <FileUser />
         Resume
