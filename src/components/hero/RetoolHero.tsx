@@ -14,7 +14,7 @@ export default function RetoolHero() {
       <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
         <Link
           key={1}
-          href="/demos/blog"
+          href="https://github.com/JohnathanKhoa/Retool-CloudAWS"
           className="flex flex-col items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
         >
           <Image

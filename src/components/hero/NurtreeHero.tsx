@@ -15,8 +15,9 @@ export default function NurtreeHero() {
       <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
         <Link
           key={1}
-          href="https://www.nurtree.com/"
+          href="https://github.com/JohnathanKhoa/NurtreeWeb"
           className="flex flex-col items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
+          target="_blank"
         >
           <Image
             className="rounded-xl pyobject-scale-down w-48 justify-self-center"
