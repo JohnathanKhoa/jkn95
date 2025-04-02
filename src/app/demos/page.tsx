@@ -9,9 +9,9 @@ export default function Page() {
     <div className="items-center justify-content-start pt-10 px-8">
       <div className="flex flex-col  items-start justify-end pt-10 px-8">
         <CatalystHero />
+        <NurtreeHero />
         <RabbitMQHero />
         <RetoolHero />
-        <NurtreeHero />
       </div>
     </div>
   );
