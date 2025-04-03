@@ -12,7 +12,7 @@ export default function RabbitMQHero() {
   return (
     <>
       {}
-      <div className="flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
+      <div className="flex flex-row items-center justify-end gap-10  text-zinc-500">
         <Link
           key={1}
           href="/demos/rabbitmq/"
@@ -37,22 +37,20 @@ export default function RabbitMQHero() {
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            Add your email to a message queue and have them processed by a
-            worker
+            Simple email service
             <br></br>
           </p>
-          <p
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-300 text-center text-balance"
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            Optional Demo: Retrieve guest-user credentials for Cloud Web Service and
-            Nurtree App
+            Optional: Retrieve guest-user credentials
             <br></br>
-          </p>
-          <p
+          </p> */}
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
@@ -69,7 +67,7 @@ export default function RabbitMQHero() {
             }
           >
             AWS MQ, Heroku, Docker
-          </p>
+          </p> */}
         </div>
       </div>
     </>

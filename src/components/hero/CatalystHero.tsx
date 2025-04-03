@@ -13,7 +13,7 @@ export default function CatalystHero() {
   return (
     <>
       {}
-      <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
+      <div className="pt-2 flex flex-row items-center justify-end gap-10  text-zinc-500">
         <Link
           key={1}
           href="https://catalyst-alpha-two.vercel.app/"
@@ -37,10 +37,10 @@ export default function CatalystHero() {
                 : "opacity-0 transition duration-300 text-center text-balance"
             }
           >
-            Featuring Catalyst UI components with TailwindCSS 4
+            Featuring Catalyst UI components with TailwindCSS
             <br></br>
           </p>
-          <p
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
@@ -66,7 +66,7 @@ export default function CatalystHero() {
             }
           >
             headlessui, clsx, framer-motion, prettier
-          </p>
+          </p> */}
         </div>
       </div>
     </>

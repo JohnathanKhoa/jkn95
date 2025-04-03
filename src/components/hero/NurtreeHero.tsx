@@ -12,7 +12,7 @@ export default function NurtreeHero() {
   return (
     <>
       {}
-      <div className="pt-2 flex flex-row items-center justify-end gap-10 font-mono text-zinc-500">
+      <div className="pt-2 flex flex-row items-center justify-end gap-10  text-zinc-500">
         <Link
           key={1}
           href="https://github.com/JohnathanKhoa/NurtreeWeb"
@@ -29,7 +29,7 @@ export default function NurtreeHero() {
           <div className="justify-self-center">Nurtree</div>
         </Link>
         <div>
-          <p
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-300 text-center text-balance"
@@ -38,7 +38,7 @@ export default function NurtreeHero() {
           >
             A blend of Spotify and Youtube API
             <br></br>
-          </p>
+          </p> */}
           <p
             className={
               hoveredDescription
@@ -49,7 +49,7 @@ export default function NurtreeHero() {
             Play all the top music videos using your own curated Spotify
             playlists
           </p>
-          <p
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-700 text-center text-balance"
@@ -65,9 +65,8 @@ export default function NurtreeHero() {
                 : "opacity-0 transition duration-900 text-center text-balance"
             }
           >
-            ~ Development Mode. Please request me to include your email for
-            access ~
-          </p>
+            
+          </p> */}
         </div>
       </div>
     </>

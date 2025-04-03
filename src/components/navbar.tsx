@@ -1,17 +1,19 @@
 import Link from "next/link";
 
 const navigation = [
-  { name: "home", href: "/" },
-  // { name: "about", href: "/about" },
-  { name: "tools", href: "/techstack" },
-  { name: "demos", href: "/demos" },
+  { name: "Home", href: "/" },
+  //  { name: "About", href: "/about" },
+   { name: "Tools", href: "/techstack" },
+  { name: "Demos", href: "/demos" },
 ];
 
 export default function Navbar() {
+  var keycount = 0;
   return (
     <nav className="pt-16 animate-fade-in">
       <ul className="flex items-center justify-center gap-4">
-        {navigation.map((item) => (
+        {navigation.map((item, index) => (
+          
           <Link
             key={item.href}
             href={item.href}
@@ -19,6 +21,7 @@ export default function Navbar() {
           >
             {item.name}
           </Link>
+          
         ))}
       </ul>
     </nav>

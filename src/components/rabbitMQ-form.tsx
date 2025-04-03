@@ -64,12 +64,12 @@ export default function RabbitMQForm() {
             name="email"
             render={({ field }) => (
               <FormItem className="flex flex-col items-center justify-center gap-y-2">
-                <FormLabel className="text-black font-semibold text-3xl font-sans">
+                <FormLabel className="text-black font-semibold text-3xl ">
                   
                 </FormLabel>
                 <FormControl>
                   <Input
-                    className="text-white font-normal"
+                    className="text-white "
                     placeholder="Email"
                     {...field}
                     type="text"
@@ -92,7 +92,7 @@ export default function RabbitMQForm() {
                     onChange={field.onChange}
                   />
                 </FormControl>
-                <FormLabel className="flex text-black font-semibold text-sm font-sans">
+                <FormLabel className="flex text-black  text-sm ">
                   I would like to recieve guest credentials for the other demos
                 </FormLabel>
               </FormItem>
