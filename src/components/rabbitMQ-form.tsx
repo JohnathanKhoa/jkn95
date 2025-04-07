@@ -57,7 +57,7 @@ export default function RabbitMQForm() {
       <div className=" space-y-3">
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="bg-slate-300 bg-opacity-80 text-white p-4 rounded flex flex-col items-center justify-center gap-y-6"
+          className="bg-opacity-50 backdrop-blur-lg shadow-2xl bg-slate-500 text-white p-4 rounded flex flex-col items-center justify-center gap-y-6"
         >
           <FormField
             control={form.control}
@@ -69,7 +69,7 @@ export default function RabbitMQForm() {
                 </FormLabel>
                 <FormControl>
                   <Input
-                    className="text-white "
+                    className="text-black "
                     placeholder="Email"
                     {...field}
                     type="text"
@@ -92,7 +92,7 @@ export default function RabbitMQForm() {
                     onChange={field.onChange}
                   />
                 </FormControl>
-                <FormLabel className="flex text-black  text-sm ">
+                <FormLabel className="flex text-white  text-sm ">
                   I would like to recieve guest credentials for the other demos
                 </FormLabel>
               </FormItem>
@@ -100,7 +100,7 @@ export default function RabbitMQForm() {
           />
           <Button
             type="submit"
-            className="rounded-xl text-black hover:text-zinc-300 hover:bg-black transition duration-300 bg-white "
+            className="rounded-md text-black hover:text-zinc-300 hover:bg-slate-500 transition duration-300 bg-white "
             disabled={form.formState.isSubmitting}
           >
             Submit

@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navigationbar from "@/components/NavigationBar";
 import Particles from "@/components/particles";
 import Head from "next/head";
+import { Nunito_Sans } from "next/font/google";
+const fontFamily = Nunito_Sans({
+  subsets: ["latin"],
+  preload: true,
+  variable: "--Nunito_Sans",
+});
 
 export const metadata: Metadata = {
   title: "jkn95dev",
@@ -16,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" className="overflow-auto scrollbar-hide">
+      <html lang="en" 
+      className={ ` ${fontFamily.variable} "overflow-auto scrollbar-hide" `}
+      >
         <Head>
           <meta
             name="viewport"
@@ -24,12 +32,12 @@ export default function RootLayout({
           />
         </Head>
 
-        <body className="bg-slate-200 ">
+        <body className=" ">
           <Particles
             className="absolute inset-0 -z-10 animate-fade-in overflow-auto scrollbar-hide"
             quantity={100}
           />
-          <Navbar />
+          <Navigationbar />
 
           <div className="overflow-auto scrollbar-hide">{children}</div>
         </body>

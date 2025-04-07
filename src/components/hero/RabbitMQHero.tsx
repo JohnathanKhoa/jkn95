@@ -20,16 +20,18 @@ export default function RabbitMQHero() {
         >
           <div>
             <Image
-              className="rounded-xl pyobject-scale-down w-48 justify-self-center"
+              className="rounded-xl  justify-self-center"
               src={RabbitMQImage}
               alt="NurtreeImage"
               onMouseEnter={() => setHoveredDescription(true)}
               onMouseLeave={() => setHoveredDescription(false)}
+              width={150}
+            height={150}
             />
             <div className="justify-self-center">RabbitMQ</div>
           </div>
         </Link>
-        <div className="">
+        {/* <div className="">
           <p
             className={
               hoveredDescription
@@ -67,8 +69,8 @@ export default function RabbitMQHero() {
             }
           >
             AWS MQ, Heroku, Docker
-          </p> */}
-        </div>
+          </p> 
+        </div> */}
       </div>
     </>
   );

@@ -14,46 +14,24 @@ export default function Page() {
           />
         </div> */}
 
-        <div className="flex flex-col items-center justify-center text-balance text-zinc-500">
-          <h2 className="pt-2">Johnathan Nguyen</h2>
-          <h3 className="pt-10">About me</h3>
-          <div className="text-pretty text-center px-8">
-            <br />
-            <br />
-            Coding enthusiast, web developer, software engineer
-            <br />
-            <br />
-            Born and raised in Chino Hills, California. San Bernardino County
-            <br />
-            <br />
-            Had my first computer at 10 years old and found a love for technology
-            <br />
-            <br />
-            Started programming in high school, taking extra credit classes and
-            learning Java, Python, and C++
-            <br />
-            <br />
-            Majored in Computer Science at Cal Poly Pomona and graduated with a
-            Bachelors of Science
-            <br />
-            <br />
-            Moved across the states for work, gaining experience building Microservices with Spring
-            <br />
-            <br />
-            Worked on services for shipping, human resources, loan processing
-            <br />
-            <br />
-            Further proceeded into full-stack, building out web applications using React and NextJS
-            <br />
-            <br />
-            Now keeping steady track to pursue higher levels in all tools and
-            languages
-            <br />
-            <br />
-            <br />
-            <br />
-            *Fun fact I am the middle child of 5 siblings, all brothers.*
-            <div></div>
+        <div className="flex flex-col items-center justify-center text-balance text-zinc-300 tracking-widest p">
+          <div className=" text-center">
+            About me
+            <div className="py-8">
+              Coding enthusiast, web developer, software engineer
+            </div>
+            <div className="flex w-1/2 items-center justify-self-center">
+              Motivated to discover new solutions to countless real-world
+              problems by using software engineering and programming skills
+              acquired in the field of Computer Science. Experienced in working
+              under a professional setting and not afraid to take initiative on
+              important tasks and opportunities. Flexible and quick to adapt
+              when working with new tools and changing environments. Always
+              open to grow and learn more from mentors and peers. Eager to
+              contribute hard work and critical thinking. Dedicated to help
+              accomplish goals and reach milestones.
+            </div>
+            {/*  */}
           </div>
         </div>
       </div>

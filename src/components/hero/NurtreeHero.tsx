@@ -20,15 +20,17 @@ export default function NurtreeHero() {
           target="_blank"
         >
           <Image
-            className="rounded-xl pyobject-scale-down w-48 justify-self-center"
+            className="rounded-xl  justify-self-center"
             src={NurtreeImage}
             alt="NurtreeImage"
             onMouseEnter={() => setHoveredDescription(true)}
             onMouseLeave={() => setHoveredDescription(false)}
+            width={150}
+            height={150}
           />
           <div className="justify-self-center">Nurtree</div>
         </Link>
-        <div>
+        {/* <div>
           {/* <p
             className={
               hoveredDescription
@@ -39,7 +41,7 @@ export default function NurtreeHero() {
             A blend of Spotify and Youtube API
             <br></br>
           </p> */}
-          <p
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
@@ -48,7 +50,7 @@ export default function NurtreeHero() {
           >
             Play all the top music videos using your own curated Spotify
             playlists
-          </p>
+          </p> */}
           {/* <p
             className={
               hoveredDescription
@@ -66,8 +68,8 @@ export default function NurtreeHero() {
             }
           >
             
-          </p> */}
-        </div>
+          </p> 
+        </div> */}
       </div>
     </>
   );

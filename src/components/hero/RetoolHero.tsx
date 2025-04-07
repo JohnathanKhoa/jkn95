@@ -16,17 +16,20 @@ export default function RetoolHero() {
           key={1}
           href="https://github.com/JohnathanKhoa/Retool-CloudAWS"
           className="flex flex-col items-center justify-center text-sm duration-200 text-zinc-500 hover:text-zinc-300"
+          target="_blank"
         >
           <Image
-            className="rounded-xl pyobject-scale-down w-48 justify-self-center"
+            className="rounded-xl  justify-self-center"
             src={RetoolImage}
             alt="RetoolImage"
             onMouseEnter={() => setHoveredDescription(true)}
             onMouseLeave={() => setHoveredDescription(false)}
+            width={150}
+            height={150}
           />
-          <div className="justify-self-center">Retool + Spring + AWS</div>
+          <div className="flex flex-col justify-self-center">Java Spring AWS Microservice</div>
         </Link>
-        <div>
+        {/* <div>
           {/* <p
             className={
               hoveredDescription
@@ -36,7 +39,7 @@ export default function RetoolHero() {
           >
             OAuth secured with managed roles and permissions to handle query access and visibility
           </p> */}
-          <p
+          {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
@@ -44,7 +47,7 @@ export default function RetoolHero() {
             }
           >
             Query controller for managing databases in the AWS cloud
-          </p>
+          </p> */}
 
           {/* <p
             className={
@@ -63,8 +66,8 @@ export default function RetoolHero() {
             }
           >
             Retool, AWS Elastic Beanstalk, EC2, RDS, S3, Docker
-          </p> */}
-        </div>
+          </p> 
+        </div> */}
       </div>
     </>
   );

@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/app/pages/about/[about]/about.mdx", "src/app/pages/about.js", "src/app/markdown/techstack.mdx"  ],
+, "src/app/pages/about/[about]/about.mdx", "src/app/pages/about.js", "src/app/markdown/techstack.mdx", "src/components/GitHubStats.jsx"  ],
   "exclude": [
     "node_modules"
   ]
