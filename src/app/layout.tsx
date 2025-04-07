@@ -3,11 +3,11 @@ import "./globals.css";
 import Navigationbar from "@/components/NavigationBar";
 import Particles from "@/components/particles";
 import Head from "next/head";
-import { Nunito_Sans } from "next/font/google";
-const fontFamily = Nunito_Sans({
+import { Geist } from "next/font/google";
+const fontFamily = Geist({
   subsets: ["latin"],
   preload: true,
-  variable: "--Nunito_Sans",
+  variable: "--Geist",
 });
 
 export const metadata: Metadata = {
