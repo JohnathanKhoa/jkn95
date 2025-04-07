@@ -12,8 +12,8 @@ export default function Blur() {
           <Image
             src={ProfileImg}
             alt={""}
-            height={3000}
-            width={3000}
+            height={1000}
+            width={1000}
             quality={100}
             priority={true}
             className="object-stretch object-cover w-full h-full rounded-xl"
