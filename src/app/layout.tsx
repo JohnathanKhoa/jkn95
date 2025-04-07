@@ -3,11 +3,12 @@ import "./globals.css";
 import Navigationbar from "@/components/NavigationBar";
 import Particles from "@/components/particles";
 import Head from "next/head";
-import { Geist } from "next/font/google";
-const fontFamily = Geist({
+import { Geist_Mono } from "next/font/google";
+import Footer from "@/components/Footer";
+const fontFamily = Geist_Mono({
   subsets: ["latin"],
   preload: true,
-  variable: "--Geist",
+  variable: "--Geist_Mono",
 });
 
 export const metadata: Metadata = {
@@ -22,8 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" 
-      className={ ` ${fontFamily.variable} "overflow-auto scrollbar-hide" `}
+      <html
+        lang="en"
+        className={` ${fontFamily.variable} "overflow-auto scrollbar-hide" `}
       >
         <Head>
           <meta
@@ -32,14 +34,15 @@ export default function RootLayout({
           />
         </Head>
 
-        <body className=" ">
-          <Particles
+        <body className="bg-zinc-200 ">
+          {/* <Particles
             className="absolute inset-0 -z-10 animate-fade-in overflow-auto scrollbar-hide"
             quantity={100}
-          />
+          /> */}
           <Navigationbar />
 
           <div className="overflow-auto scrollbar-hide">{children}</div>
+          <Footer />
         </body>
       </html>
     </>
