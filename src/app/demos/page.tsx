@@ -6,7 +6,7 @@ import CatalystHero from "@/components/hero/CatalystHero";
 
 export default function Page() {
   return (
-    <div className="items-center justify-content-start pt-10 px-8">
+    <div className="items-center justify-content-start my-16 px-8">
       <div className="flex md:flex-row flex-col items-center justify-center gap-10 pt-10 px-8">
         <NurtreeHero />
         <CatalystHero />

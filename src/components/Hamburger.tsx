@@ -65,6 +65,15 @@ export default function Hamburger() {
                       <div>Demos</div>
                     </Link>
                   </MenuItem>
+                  <MenuSeparator className="my-1 h-px bg-white" />
+                  <MenuItem key={keycount++}>
+                    <Link
+                      className="flex rounded-sm pl-2 py-3 hover:bg-indigo-100/50 cursor-pointer"
+                      href="/links"
+                    >
+                      <div>Links</div>
+                    </Link>
+                  </MenuItem>
                   <div className="flex grow max-h-full"></div>
                   <MenuSeparator className="my-1 h-px bg-white" />
                 </div>

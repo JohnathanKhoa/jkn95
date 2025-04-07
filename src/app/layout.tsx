@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Navigationbar from "@/components/NavigationBar";
 import Particles from "@/components/particles";
@@ -33,7 +34,6 @@ export default function RootLayout({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <Analytics />
         </Head>
 
         <body className="bg-zinc-200 ">
@@ -42,9 +42,10 @@ export default function RootLayout({
             quantity={100}
           /> */}
           <Navigationbar />
-
           <div className="overflow-auto scrollbar-hide">{children}</div>
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </>

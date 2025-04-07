@@ -20,7 +20,7 @@ export default function Page() {
             <div className="py-8">
               Coding enthusiast, web developer, software engineer
             </div>
-            <div className="flex w-1/2 items-center justify-self-center">
+            <div className="flex w-1/2 ">
               Motivated to discover new solutions to countless real-world
               problems by using software engineering and programming skills
               acquired in the field of Computer Science. Experienced in working
