@@ -8,13 +8,13 @@ export default function Page() {
 
         <div className="text-pretty text-center p-8">
           <div className="text-start">
-            Languages: Bash, Python, SQL, Java 17, TypeScript, HTML5,
+            Languages: Bash, Python, SQL, Java 17, JavaScript, TypeScript, HTML5, Markdown
             TailwindCSS 4
           </div>
           <br />
           <br />
           <div className="text-start">
-            Frontend: React, NextJS
+            Frontend: React, NextJS, Redux, Zustand
           </div>
           <br />
           <br />
