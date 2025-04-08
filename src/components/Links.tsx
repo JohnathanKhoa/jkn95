@@ -5,7 +5,7 @@ const links = [
   {
     name: "resume",
     icon: <FileUser />,
-    href: "https://docs.google.com/document/d/1mGLYQJzevyh9Ri85ePtBmVh80Wo0epS9fLyG7XrIkIw/edit?usp=sharing",
+    href: "https://docs.google.com/document/d/1M-gvP145gU3COeSkQeEYHPavSPYaDqjoSUCsCg7A7qw/edit?usp=sharing",
     download: "JohnathanKhoaNguyenResume.pdf",
   },
   {
