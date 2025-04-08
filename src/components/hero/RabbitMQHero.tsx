@@ -26,7 +26,7 @@ export default function RabbitMQHero() {
               onMouseEnter={() => setHoveredDescription(true)}
               onMouseLeave={() => setHoveredDescription(false)}
               width={150}
-            height={150}
+              height={150}
             />
             <div className="justify-self-center">RabbitMQ</div>
           </div>
