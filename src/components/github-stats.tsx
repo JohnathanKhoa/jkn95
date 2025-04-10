@@ -9,8 +9,9 @@ export default function GitHubContributions() {
       <h2 className=" text-2xl font-bold mb-6 ">My GitHub Contributions</h2>
       <GitHubCalendar
         username="JohnathanKhoa"
+        bl
         blockSize={15}
-        blockMargin={5}
+        blockMargin={2}
         colorScheme="light" // based on your theme
         fontSize={16}
         theme={{

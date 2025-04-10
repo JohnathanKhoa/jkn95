@@ -2,8 +2,8 @@ export default function TechStack() {
   return (
     <>
       <div className="flex flex-row pb-16">
-        <div className="flex w-1/5"></div>
-        <div className="flex flex-col w-4/5 right-0 items-center justify-center text-balance text-xl text-slate-500 tracking-widest pt-10 ">
+        {/* <div className="flex w-1/5"></div> */}
+        <div className="flex flex-col w-full items-center justify-center text-balance text-base text-zinc-600 dark:text-zinc-400 pt-10 ">
           <h1 className="mt-16">
             <div className="">
               <div>Tech Stack</div>

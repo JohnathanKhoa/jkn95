@@ -27,7 +27,7 @@ export default function RetoolHero() {
             width={150}
             height={150}
           />
-          <div className="flex flex-col justify-self-center">Java Spring AWS Microservice</div>
+          <div className="flex flex-col justify-self-center">Microservice</div>
         </Link>
         {/* <div>
           {/* <p

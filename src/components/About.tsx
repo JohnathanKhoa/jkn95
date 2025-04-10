@@ -8,7 +8,7 @@ export default function About() {
             <div className="">
               Coding enthusiast, web developer, software engineer
             </div>
-            <div className="flex md:w-1/2 items-center justify-self-center">
+            {/* <div className="flex md:w-1/2 items-center justify-self-center">
               Motivated to discover new solutions to countless real-world
               problems by using software engineering and programming skills
               acquired in the field of Computer Science. Experienced in working
@@ -18,7 +18,7 @@ export default function About() {
               to grow and learn more from mentors and peers. Eager to contribute
               hard work and critical thinking. Dedicated to help accomplish
               goals and reach milestones.
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
