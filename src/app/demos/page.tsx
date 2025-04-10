@@ -28,7 +28,7 @@ export default function Page() {
       </div>
       <div className="justify-items-center md:flex-row  grid md:grid-cols-4 col-span-2  gap-8 pt-10 ">
         <CatalystHero />
-        <CommitHero />
+        {/* <CommitHero /> */}
         <KeynoteHero />
         <PocketHero />
         <ProtocolHero />
