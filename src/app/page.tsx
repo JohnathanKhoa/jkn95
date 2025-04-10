@@ -26,7 +26,7 @@ import {
 } from "@/components/tailwind-plus-template/Spotlight/lib/articles";
 import { formatDate } from "@/components/tailwind-plus-template/Spotlight/lib/formatDate";
 
-import GitHubContributions from "@/components/github-stats";
+import GitHubContributions from "@/components/GitHubContributions";
 
 function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
