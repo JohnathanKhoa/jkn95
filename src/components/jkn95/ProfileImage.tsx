@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function ProfileImage() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-balance">
+      <div className="items-center justify-center ">
         <div className="">
           <Image
-            className="pyobject-scale-down rounded-xl w-48 justify-self-center"
+            className="pyobject-scale-down rounded w-64 justify-self-center"
             src={ProfileImg}
             alt="Image"
           />
