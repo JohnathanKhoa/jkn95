@@ -13,14 +13,16 @@ import StudioHero from "@/components/hero/StudioHero";
 export default function Page() {
   return (
     <div className="flex flex-col w-full items-center justify-content-center my-16 px-8">
+      <div className="text-2xl font-bold tracking-tight text-zinc-800  dark:text-zinc-100">Developer Demos</div>
       <div className="justify-items-center md:flex-row  grid md:grid-cols-2  gap-8 pt-10 px-8">
+        
         <NurtreeHero />
         <RabbitMQHero />
         <RetoolHero />
       </div>
       <div></div>
-      <div className=" w-4/5 my-1 h-px bg-white mt-8"></div>
-      <div className="text-2xl font-bold tracking-tight text-zinc-800  dark:text-zinc-100">Tailwind Plus</div>
+      <div className=" w-1/3 my-1 h-px bg-zinc-700 mt-8"></div>
+      <div className="text-2xl font-bold tracking-tight text-zinc-800  dark:text-zinc-100">Tailwind Plus UI</div>
       <div className="justify-items-center md:flex-row  grid md:grid-cols-2  gap-8 pt-10 ">
         <CatalystHero />
         <CommitHero />

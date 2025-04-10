@@ -5,7 +5,7 @@ import GitHubCalendar from "react-github-calendar";
 
 export default function GitHubContributions() {
   return (
-    <div className="flex flex-col w-screen items-center justify-center border-1 border-black rounded-md p-4 text-slate-500">
+    <div className="flex flex-col w-screen items-center justify-center border-1 border-black rounded-md p-4 text-slate-500 animate-fade">
       <h2 className=" text-2xl font-bold mb-6 ">My GitHub Contributions</h2>
       <GitHubCalendar
         username="JohnathanKhoa"

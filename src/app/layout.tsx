@@ -27,10 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className="h-full antialiased " suppressHydrationWarning>
       <body className="flex h-full bg-zinc-100 dark:bg-black">
         <Providers>
-          <div className="flex w-full">
+          <div className="flex w-full animate-fade">
             <Layout>{children}</Layout>
           </div>
         </Providers>

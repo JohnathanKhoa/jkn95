@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card } from "@/components/tailwind-plus-template/Spotlight/components/Card";
 import clsx from "clsx";
 import { Button } from "@/components/tailwind-plus-template/Spotlight/components/Button";
+import { article } from "@/components/Articles"
 
 import {
   GitHubIcon,
@@ -90,14 +91,14 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 function Article({ article }: any) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
+      <Card.Title href={article.href} >
         {article.title}
       </Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
+        #{article.hashtag}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      {article.href && <Card.Cta>Nurtree</Card.Cta>}
     </Card>
   );
 }
@@ -119,7 +120,7 @@ function Newsletter() {
   return (
     <form
       //action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 animate-fade"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
@@ -221,7 +222,7 @@ function Resume() {
   ];
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 animate-fade">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
@@ -276,10 +277,10 @@ function Photos() {
 
 export default async function Home() {
   //let articles = (await getAllArticles()).slice(0, 4)
-  let articles: any[] = [];
+  
   return (
     <>
-      <Container className="mt-9">
+      <Container className="mt-9 animate-fade">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Coding enthusiast, web developer, software engineer
@@ -313,11 +314,11 @@ export default async function Home() {
       <div>
         <GitHubContributions />
       </div>
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-24 md:mt-28 animate-fade">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+          <div className="flex flex-col gap-16 animate-fade">
+            {article.map((article) => (
+              <Article key={article.title} article={article} />
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">

@@ -166,7 +166,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">About</NavItem>
+        <NavItem href="/">Home</NavItem>
         <NavItem href="/techstack">Tools</NavItem>
         <NavItem href="/demos">Demos</NavItem>
         <NavItem href="/links">Links</NavItem>
@@ -236,10 +236,10 @@ function Avatar({
       <Image
         src={avatarImage}
         alt=""
-        sizes={large ? '4rem' : '2.25rem'}
+        sizes={large ? '4rem' : '4rem'}
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-          large ? 'h-16 w-16' : 'h-9 w-9',
+          large ? 'h-16 w-16' : 'h-16 w-16',
         )}
         priority
       />
@@ -340,7 +340,7 @@ export function Header() {
 
     function updateStyles() {
       updateHeaderStyles()
-      updateAvatarStyles()
+      // updateAvatarStyles()
       isInitial.current = false
     }
 
@@ -404,10 +404,10 @@ export function Header() {
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
-          style={{
-            position:
-              'var(--header-position)' as React.CSSProperties['position'],
-          }}
+          // style={{
+          //   position:
+          //     'var(--header-position)' as React.CSSProperties['position'],
+          // }}
         >
           <Container
             className="top-(--header-top,--spacing(6)) w-full"
