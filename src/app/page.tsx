@@ -1,16 +1,15 @@
+"use client";
 import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/tailwind-plus-template/Spotlight/components/Container";
 import Link from "next/link";
 import { Card } from "@/components/tailwind-plus-template/Spotlight/components/Card";
 import clsx from "clsx";
 import { Button } from "@/components/tailwind-plus-template/Spotlight/components/Button";
-import { article } from "@/components/Articles"
+import { article } from "@/components/jkn95/Articles";
 
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from "@/components/tailwind-plus-template/Spotlight/components/SocialIcons";
 import Atlas from "@/public/images/logos/atlas.png";
 
@@ -21,13 +20,9 @@ import image2 from "@/public/images/photos/protocol.png";
 import image3 from "@/public/images/photos/commit.png";
 import image4 from "@/public/images/photos/pocket.png";
 import image5 from "@/public/images/photos/keynote.png";
-import {
-  type ArticleWithSlug,
-  getAllArticles,
-} from "@/components/tailwind-plus-template/Spotlight/lib/articles";
-import { formatDate } from "@/components/tailwind-plus-template/Spotlight/lib/formatDate";
 
-import GitHubContributions from "@/components/GitHubContributions";
+import GitHubContributions from "@/components/jkn95/GitHubContributions";
+import { useState } from "react";
 
 function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -91,9 +86,7 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 function Article({ article }: any) {
   return (
     <Card as="article">
-      <Card.Title href={article.href} >
-        {article.title}
-      </Card.Title>
+      <Card.Title href={article.href}>{article.title}</Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         #{article.hashtag}
       </Card.Eyebrow>
@@ -117,9 +110,14 @@ function SocialLink({
 }
 
 function Newsletter() {
+  const [inputValue, setInputValue] = useState("");
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+    //onInputChange(event.target.value); // Pass the value to the parent component
+  };
   return (
     <form
-      //action="/thank-you"
+      action={`/email/${encodeURIComponent(inputValue)}`}
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 animate-fade"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -129,11 +127,11 @@ function Newsletter() {
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         I'll send over email with my resume and contact information.
       </p>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        *This component is under construction. Come back soon!*
-      </p>
+
       <div className="mt-6 flex">
         <input
+          value={inputValue}
+          onChange={handleChange}
           type="email"
           placeholder="Email address"
           aria-label="Email address"
@@ -232,9 +230,13 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="https://docs.google.com/document/d/1M-gvP145gU3COeSkQeEYHPavSPYaDqjoSUCsCg7A7qw/edit?usp=sharing"
-          target="_blank"
-          download="JohnathanKhoaNguyenResume.pdf" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="https://docs.google.com/document/d/1M-gvP145gU3COeSkQeEYHPavSPYaDqjoSUCsCg7A7qw/edit?usp=sharing"
+        target="_blank"
+        download="JohnathanKhoaNguyenResume.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -275,12 +277,12 @@ function Photos() {
   );
 }
 
-export default async function Home() {
+export default function Home() {
   //let articles = (await getAllArticles()).slice(0, 4)
-  
+
   return (
     <>
-      <Container className="mt-9 animate-fade">
+      <Container className="mt-9 animate-fade delay-700">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Coding enthusiast, web developer, software engineer

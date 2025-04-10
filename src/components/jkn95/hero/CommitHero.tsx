@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import CommitImage from "@/public/images/photos/commit.png"
+import CommitImage from "@/public/images/photos/commit.png";
 import { useState } from "react";
 
 export default function CommitHero() {
@@ -30,7 +30,6 @@ export default function CommitHero() {
           />
           <div className="justify-self-center">Commit</div>
         </Link>
-        
       </div>
     </>
   );

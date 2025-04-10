@@ -1,30 +1,30 @@
-import { type Metadata } from 'next'
+import { type Metadata } from "next";
 
-import { Providers } from '@/app/providers'
-import { Layout } from '@/components/tailwind-plus-template/Spotlight/components/Layout'
+import { Providers } from "@/providers/providers";
+import { Layout } from "@/components/tailwind-plus-template/Spotlight/components/Layout";
 
 // import '@/styles/tailwind.css'
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Johnathan Nguyen',
+    template: "%s - Johnathan Nguyen",
     default:
-      'Johnathan Nguyen - Coding Enthusiast, web developer, software engineer',
+      "Johnathan Nguyen - Coding Enthusiast, web developer, software engineer",
   },
   description:
-    'I’m Johnathan, a full-stack developer based in Chino Hills, California. I like to build Websites and Microservices.',
+    "I’m Johnathan, a full-stack developer based in Chino Hills, California. I like to build Websites and Microservices.",
   // alternates: {
   //   types: {
   //     'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
   //   },
   // },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="h-full antialiased " suppressHydrationWarning>
@@ -36,5 +36,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }

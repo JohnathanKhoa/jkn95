@@ -7,7 +7,7 @@ export const article = [
     title: 'Building a passion project',
     href: "https://github.com/JohnathanKhoa/NurtreeWeb",
     description:
-      'Love what you do, and do what you love. Everybody should have a passion project. I think nowadays we get caught up in trying to fit ourselves into a specification or a role into society. Sometimes we can forget the importance of finding purpose and fulfillment within our career. Take a look at my most recent passion project: Nurtree',
+      'Love what you do, and do what you love. Everybody should have a passion project. Take a look at my most recent passion project: Nurtree',
   },
   {
     author: 'Johnathan Nguyen',

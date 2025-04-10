@@ -39,7 +39,7 @@ export default function RetoolHero() {
           >
             OAuth secured with managed roles and permissions to handle query access and visibility
           </p> */}
-          {/* <p
+        {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
@@ -49,7 +49,7 @@ export default function RetoolHero() {
             Query controller for managing databases in the AWS cloud
           </p> */}
 
-          {/* <p
+        {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-700 text-center text-balance"

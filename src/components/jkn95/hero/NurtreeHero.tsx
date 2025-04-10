@@ -41,7 +41,7 @@ export default function NurtreeHero() {
             A blend of Spotify and Youtube API
             <br></br>
           </p> */}
-          {/* <p
+        {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
@@ -51,7 +51,7 @@ export default function NurtreeHero() {
             Play all the top music videos using your own curated Spotify
             playlists
           </p> */}
-          {/* <p
+        {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-700 text-center text-balance"

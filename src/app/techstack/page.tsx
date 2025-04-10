@@ -1,13 +1,11 @@
-import Aside from "@/components/Aside";
-import Blur from "@/components/Blur";
-import TechStack from "@/components/TeckStack";
+import TechStack from "@/components/jkn95/TeckStack";
 
 export default function Page() {
   return (
     <>
-    {/* <Aside/>
+      {/* <Aside/>
     <Blur/> */}
-    <TechStack/>
+      <TechStack />
     </>
   );
 }

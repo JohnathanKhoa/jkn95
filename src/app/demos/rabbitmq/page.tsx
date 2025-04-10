@@ -1,5 +1,5 @@
 import React from "react";
-import RabbitMQForm from "@/components/rabbitMQ-form";
+import RabbitMQForm from "@/components/jkn95/RabbitMQForm";
 
 export default function Page() {
   return (

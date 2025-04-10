@@ -16,10 +16,3 @@ export const getGreeting = () => {
   return "Evening";
 };
 
-export const searchFilterTags = [
-  { link: "", label: "All" },
-  { link: "/tracks", label: "Songs" },
-  { link: "/albums", label: "Albums" },
-  { link: "/artists", label: "Artists" },
-  { link: "/playlists", label: "Playlists" },
-];

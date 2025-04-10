@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import StudioImage from "@/public/images/photos/studio.png"
+import StudioImage from "@/public/images/photos/studio.png";
 import { useState } from "react";
 
 export default function SpotlightHero() {
@@ -30,7 +30,6 @@ export default function SpotlightHero() {
           />
           <div className="justify-self-center">Studio</div>
         </Link>
-        
       </div>
     </>
   );

@@ -1,30 +1,30 @@
-import Image, { type ImageProps } from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
+import Image, { type ImageProps } from "next/image";
+import Link from "next/link";
+import clsx from "clsx";
 
-import { Button } from '../tailwind-plus-template/Spotlight/components/Button'
-import { Card } from '../tailwind-plus-template/Spotlight/components/Card'
-import { Container } from '../tailwind-plus-template/Spotlight/components/Container'
+import { Button } from "../../tailwind-plus-template/Spotlight/components/Button";
+import { Card } from "../../tailwind-plus-template/Spotlight/components/Card";
+import { Container } from "../../tailwind-plus-template/Spotlight/components/Container";
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   XIcon,
-} from '../tailwind-plus-template/Spotlight/components/SocialIcons'
-import logoAirbnb from './Spotlight/images/logos/airbnb.svg'
-import logoFacebook from './Spotlight/images/logos/facebook.svg'
-import logoPlanetaria from './Spotlight/images/logos/planetaria.svg'
-import logoStarbucks from './Spotlight/images/logos/starbucks.svg'
-import image1 from './Spotlight/images/photos/image-1.jpg'
-import image2 from './Spotlight/images/photos/image-2.jpg'
-import image3 from './Spotlight/images/photos/image-3.jpg'
-import image4 from './Spotlight/images/photos/image-4.jpg'
-import image5 from './Spotlight/images/photos/image-5.jpg'
+} from "../../tailwind-plus-template/Spotlight/components/SocialIcons";
+import logoAirbnb from "./Spotlight/images/logos/airbnb.svg";
+import logoFacebook from "./Spotlight/images/logos/facebook.svg";
+import logoPlanetaria from "./Spotlight/images/logos/planetaria.svg";
+import logoStarbucks from "./Spotlight/images/logos/starbucks.svg";
+import image1 from "./Spotlight/images/photos/image-1.jpg";
+import image2 from "./Spotlight/images/photos/image-2.jpg";
+import image3 from "./Spotlight/images/photos/image-3.jpg";
+import image4 from "./Spotlight/images/photos/image-4.jpg";
+import image5 from "./Spotlight/images/photos/image-5.jpg";
 // import { type ArticleWithSlug, getAllArticles } from './Spotlight/lib/articles'
-import { formatDate } from '../tailwind-plus-template/Spotlight/lib/formatDate'
-import About from '../About'
+import { formatDate } from "../../tailwind-plus-template/Spotlight/lib/formatDate";
+import About from "../About";
 
-function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -44,10 +44,10 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
-function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -67,10 +67,10 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
-function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
@@ -80,7 +80,7 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 // function Article({ article }: { article: ArticleWithSlug }) {
@@ -102,13 +102,13 @@ function SocialLink({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
+  icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
-  )
+  );
 }
 
 function Newsletter() {
@@ -137,25 +137,25 @@ function Newsletter() {
         </Button>
       </div>
     </form>
-  )
+  );
 }
 
 interface Role {
-  company: string
-  title: string
-  logo: ImageProps['src']
-  start: string | { label: string; dateTime: string }
-  end: string | { label: string; dateTime: string }
+  company: string;
+  title: string;
+  logo: ImageProps["src"];
+  start: string | { label: string; dateTime: string };
+  end: string | { label: string; dateTime: string };
 }
 
 function Role({ role }: { role: Role }) {
   let startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
+    typeof role.start === "string" ? role.start : role.start.label;
   let startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
+    typeof role.start === "string" ? role.start : role.start.dateTime;
 
-  let endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+  let endLabel = typeof role.end === "string" ? role.end : role.end.label;
+  let endDate = typeof role.end === "string" ? role.end : role.end.dateTime;
 
   return (
     <li className="flex gap-4">
@@ -176,49 +176,49 @@ function Role({ role }: { role: Role }) {
           className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
           aria-label={`${startLabel} until ${endLabel}`}
         >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
-          <span aria-hidden="true">—</span>{' '}
+          <time dateTime={startDate}>{startLabel}</time>{" "}
+          <span aria-hidden="true">—</span>{" "}
           <time dateTime={endDate}>{endLabel}</time>
         </dd>
       </dl>
     </li>
-  )
+  );
 }
 
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: "Planetaria",
+      title: "CEO",
       logo: logoPlanetaria,
-      start: '2019',
+      start: "2019",
       end: {
-        label: 'Present',
+        label: "Present",
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
+      company: "Airbnb",
+      title: "Product Designer",
       logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      start: "2014",
+      end: "2019",
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: "Facebook",
+      title: "iOS Software Engineer",
       logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      start: "2011",
+      end: "2014",
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: "Starbucks",
+      title: "Shift Supervisor",
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: "2008",
+      end: "2011",
     },
-  ]
+  ];
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -236,11 +236,17 @@ function Resume() {
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  )
+  );
 }
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let rotations = [
+    "rotate-2",
+    "-rotate-2",
+    "rotate-2",
+    "rotate-2",
+    "-rotate-2",
+  ];
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -249,8 +255,8 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              rotations[imageIndex % rotations.length],
+              "relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800",
+              rotations[imageIndex % rotations.length]
             )}
           >
             <Image
@@ -263,7 +269,7 @@ function Photos() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default async function Spotlight() {
@@ -274,10 +280,9 @@ export default async function Spotlight() {
       <Container className="mt-16">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Coding enthusiast, web developer, software engineer
+            Coding enthusiast, web developer, software engineer
           </h1>
-          <About/>
-          
+          <About />
         </div>
       </Container>
       <Photos />
@@ -295,5 +300,5 @@ export default async function Spotlight() {
         </div>
       </Container>
     </>
-  )
+  );
 }

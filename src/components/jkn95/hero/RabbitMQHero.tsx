@@ -52,7 +52,7 @@ export default function RabbitMQHero() {
             Optional: Retrieve guest-user credentials
             <br></br>
           </p> */}
-          {/* <p
+        {/* <p
             className={
               hoveredDescription
                 ? "opacity-100 transition duration-500 text-center text-balance"
