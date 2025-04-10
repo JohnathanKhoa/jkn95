@@ -19,7 +19,7 @@ export default function Page() {
       <div className="justify-items-center md:flex-row  grid md:grid-cols-4 col-span-2 gap-8 pt-10 px-8">
         <NurtreeHero />
         {/* <RabbitMQHero /> */}
-        <RetoolHero />
+        {/* <RetoolHero /> */}
       </div>
       <div></div>
       <div className=" w-1/3 my-1 h-px bg-zinc-700 mt-8"></div>
