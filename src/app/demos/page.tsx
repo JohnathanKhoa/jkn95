@@ -29,11 +29,11 @@ export default function Page() {
       <div className="justify-items-center md:flex-row  grid md:grid-cols-4 col-span-2  gap-8 pt-10 ">
         <CatalystHero />
         {/* <CommitHero /> */}
-        <KeynoteHero />
-        <PocketHero />
-        <ProtocolHero />
+        {/* <KeynoteHero /> */}
+        {/* <PocketHero /> */}
+        {/* <ProtocolHero /> */}
         {/* <SpotlightHero /> */}
-        <StudioHero />
+        {/* <StudioHero /> */}
       </div>
     </div>
   );
